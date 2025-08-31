@@ -1,0 +1,62 @@
+# AI Deception Definition
+
+AI deception can be broadly defined as behavior by AI systems that induces false beliefs in humans or other AI systems, thereby securing outcomes that are advantageous to the AI itself
+
+Formal Definition:
+
+\begin{formaldefinitionbox}{AI Deception}
+At time step $t$ (potentially within a long-horizon task), the signaler emits a signal $Y_t$ to the receiver, prompting the receiver to form a belief $X_t$ about an underlying state and subsequently take an action $A_t$. If the following three conditions hold:
+
+\begin{enumerate}[left=0.3em]
+    \item $A_t$ benefits the signaler (\textit{i.e.}, yields a positive utility).
+    \item $A_t$ is a rational response given the belief $X_t$,
+    \item The belief $X_t$ is objectively false,
+\end{enumerate}
+
+then $Y_t$ is classified as a deceptive signal, and the entire interaction constitutes an instance of deception.
+
+In more general dynamic settings, deception can be modeled as a temporal process where the signaler emits a sequence of signals $Y_t$ over time steps $t = 1, \dots, T$, thereby shaping the receiver’s belief state $b_t$. If this belief trajectory systematically diverges from the ground truth $X_t$, and this divergence consistently benefits the signaler, it constitutes a case of sustained deception.
+\end{formaldefinitionbox}
+\label{definition}
+
+# AI Deception Cycle
+
+./images/ai_deception_cycle.png
+
+The AI Deception Cycle. (1) The framework is structured around a cyclical interaction between the \textbf{Deception Genesis} process and the \textbf{Deception Mitigation} process. (2) The Deception Genesis identifies the conditions under which deception arises—namely, incentive foundation, capability precondition, and contextual trigger—while the Deception Mitigation addresses detection, evaluation, and potential solutions anchored in these genesis factors. However, deception mitigation is rarely once-and-for-all; models may continually develop new ways to circumvent oversight, giving rise to increasingly sophisticated deceptive behaviors. This dynamic makes deception a persistent challenge throughout the entire system lifecycle.
+
+# Empirical Studies
+这里文字和图片各占一半 因为图片是个小图
+./images/empirical_studies.png
+Taxonomy of AI deception across three classes: \textit{Behavioral-Signaling Deception}, \textit{Internal Process Deception}, and \textit{Goal-Environment Deception}. AI deceptions are mapped along dimensions of oversight vigilance and detection difficulty, showing progression from overt behavioral signals to covert environmental manipulation.
+
+# Risks of AI Deception
+./images/risks.png
+
+we propose a five-level risk typology . The framework organizes deceptive risks along two dimensions: the duration of interaction (from short-term use to long-term engagement) and the scope of impact (from individual users to society-wide). 
+
+At the first level, \textbf{R1: Cognitive Misleading} captures localized effects, where users form false beliefs or misplaced trust based on subtle distortions. \textbf{R2: Strategic Manipulation} reflects how, over prolonged interactions, users can be steered toward entrenched misconceptions or behavioral dependencies that are difficult to reverse. \textbf{R3: Objective Misgeneralization} highlights failures in specialized or high-stakes domains, where deceptively competent outputs can lead to software errors, economic losses, or fraud. \textbf{R4: Institutional Erosion} emphasizes the erosion of trust in science, governance, and epistemic institutions when deceptive practices scale, weakening social coordination and accountability. Finally, \textbf{R5: Capability Concealment with Runaway Potential} points to scenarios where hidden capabilities and long-horizon deception undermine human oversight entirely, raising prospects of uncontrollable system behavior. Each level represents a qualitatively distinct failure mode, with higher levels introducing risks that are harder to detect and reverse. Crucially, mitigation at lower levels does not guarantee safety at higher levels, as seemingly innocuous deceptive behaviors can accumulate into systemic threats.
+
+# Deception Genesis: Deception Genesis: Incentive Foundation x Capability x Trigger
+(标题要高亮)
+
+## Incentive Foundation
+./images/incentive_foundations.png
+
+As the training stage progresses, root causes of emergent deception arise sequentially as the \textit{deception ladder}. Before training, data contamination occurs when preparing training data; reward misspecification occurs when designing the training procedure; they collectively form the seed of deceptive strategies. During the training, due to goal misgeneralization, deceptive strategies are internalized and stabilized into instrumental goals. Later in deployment, these goals may drive more sophisticated forms of deception that are harder to detect and pose greater risks.
+
+## Capability Precondition
+./images/capability.png
+
+Hierarchical organization of AI capabilities that correlate with deception, grouped into three categories: {Perception} , {Planning}, and {Performing}. \textcolor[rgb]{0.55,0,0}{\textbf{High-level capabilities}} are emergent abilities enabling sophisticated deception, while \textcolor[rgb]{1,0.55,0}{\textbf{base capabilities}} provide the foundational competencies that support them. Examples adapted from agentic misalignment 
+
+## Contextual Trigger
+./images/contextual_triggers.png
+We categorize contextual triggers into three main categories: \textit{Supervision Gap}, \textit{Distributional Shift}, and \textit{Environmental Pressure}. Each category can independently trigger deception or combine with others to amplify deceptive behavior. Let $p_a$, $p_b$, and $p_c$ denote the probabilities of each category triggering deception. The illustrative example is inspired by the ``fabricated actions'' issue~\citep{chowdhury2025truthfulness}, where a model at test time encounters all three triggers simultaneously. These triggers amplify the probability of model deception, leading the model to fabricate actions it claims to have taken to fulfill user requests.
+
+# Deception Mitigation: Detection, Evaluation and Potential Solutions
+
+./images/deception_mitigation.png
+
+Overview of AI deception-related evaluations. We organize existing studies from two perspectives: evaluation in \textcolor{orange}{\textbf{static settings}} and evaluation in \textcolor{teal}{\textbf{interactive environments}}, and we annotate each work with its release date, data size, institution, data type, and description.
+./table_benchmarks.png

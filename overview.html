@@ -27,6 +27,15 @@
 		list-style:disc;
 		margin-bottom: 10px;
 		}
+		
+		/* 覆盖全局p标签样式，确保学术内容左对齐 */
+		.academic-content p,
+		.formal-definition-box p {
+			text-align: left !important;
+			width: auto !important;
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
 		li {
 		margin-bottom: 10px;
 		}
@@ -96,10 +105,221 @@
 		margin-bottom: 10px;
 		}
 		
-		.stats-label {
-		font-size: 1.1em;
-		opacity: 0.9;
+				.stats-label {
+			font-size: 1.1em;
+			opacity: 0.9;
 		}
+		
+		/* Academic style overrides */
+		.academic-section {
+			padding: 80px 0;
+		}
+		
+		.academic-title {
+			font-family: 'Times New Roman', 'Times', serif;
+			font-size: 2.8em;
+			font-weight: 700;
+			color: #2c3e50;
+			text-align: center;
+			margin-bottom: 50px;
+			line-height: 1.2;
+		}
+		
+		.academic-content {
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 0 20px;
+		}
+		
+		.lead-paragraph {
+			font-size: 1.3em;
+			line-height: 1.6;
+			color: #2c3e50;
+			text-align: center;
+			margin-bottom: 40px;
+			font-family: 'Times New Roman', 'Times', serif;
+		}
+		
+		.formal-definition-box {
+			background: #f8f9fa;
+			border-left: 5px solid #B22222;
+			padding: 40px;
+			border-radius: 8px;
+			margin: 40px auto;
+			box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+			max-width: 1000px;
+			width: 100%;
+			box-sizing: border-box;
+		}
+		
+		.definition-title {
+			font-family: 'Times New Roman', 'Times', serif;
+			font-size: 1.4em;
+			font-weight: 700;
+			color: #B22222;
+			margin-bottom: 20px;
+		}
+		
+		.definition-content {
+			font-size: 1.1em;
+			line-height: 1.7;
+			color: #2c3e50;
+			margin-bottom: 15px;
+			text-align: left;
+		}
+		
+		.definition-conditions {
+			margin: 20px 0;
+			padding-left: 30px;
+		}
+		
+		.definition-conditions li {
+			font-size: 1.1em;
+			line-height: 1.6;
+			margin-bottom: 8px;
+			color: #2c3e50;
+		}
+		
+		.definition-conclusion,
+		.definition-extension {
+			font-size: 1.1em;
+			line-height: 1.7;
+			color: #2c3e50;
+			margin: 15px 0;
+			text-align: left;
+		}
+		
+		.figure-container {
+			text-align: center;
+			margin: 40px 0;
+		}
+		
+		.academic-figure {
+			max-width: 100%;
+			height: auto;
+			border-radius: 8px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+		}
+		
+		.academic-figure-small {
+			max-width: 100%;
+			height: auto;
+			border-radius: 8px;
+			box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+		}
+		
+		.figure-description {
+			font-size: 1.1em;
+			line-height: 1.6;
+			color: #2c3e50;
+			margin-top: 25px;
+			text-align: left;
+			font-style: italic;
+		}
+		
+		.two-column-layout {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 40px;
+			align-items: center;
+		}
+		
+		.text-column {
+			padding-right: 20px;
+		}
+		
+		.image-column {
+			text-align: center;
+		}
+		
+		.academic-text {
+			font-size: 1.1em;
+			line-height: 1.7;
+			color: #2c3e50;
+			text-align: left;
+		}
+		
+		.risk-levels {
+			margin-top: 30px;
+		}
+		
+		.risk-description,
+		.risk-conclusion {
+			font-size: 1.1em;
+			line-height: 1.7;
+			color: #2c3e50;
+			text-align: left;
+			margin-bottom: 20px;
+		}
+		
+		.subsection-title {
+			font-family: 'Times New Roman', 'Times', serif;
+			font-size: 2.2em;
+			font-weight: 600;
+			color: #B22222;
+			margin-bottom: 40px;
+			text-align: center;
+		}
+		
+		.chapter-title {
+			font-family: 'Times New Roman', 'Times', serif;
+			font-size: 3.2em;
+			font-weight: 800;
+			color: #8B0000;
+			text-align: center;
+			margin-bottom: 60px;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+			text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+		}
+		
+					/* 统一加粗文字为暗红色 */
+			strong, b {
+				color: #8B0000;
+				font-weight: bold;
+			}
+			
+			/* 确保定义框内的文字对齐 */
+			.formal-definition-box *,
+			.formal-definition-box p,
+			.formal-definition-box ol,
+			.formal-definition-box li {
+				text-align: left !important;
+				width: auto !important;
+				margin-left: 0 !important;
+				margin-right: 0 !important;
+			}
+			
+			.definition-conditions {
+				text-align: left !important;
+				width: auto !important;
+				margin-left: 30px !important;
+				margin-right: 0 !important;
+			}
+			
+			@media (max-width: 768px) {
+				.two-column-layout {
+					grid-template-columns: 1fr;
+					gap: 30px;
+				}
+				
+				.academic-title {
+					font-size: 2.2em;
+				}
+				
+				.chapter-title {
+					font-size: 2.5em;
+				}
+				
+				.subsection-title {
+					font-size: 1.8em;
+				}
+				
+				.formal-definition-box {
+					padding: 25px;
+					margin: 30px 15px;
+				}
+			}
 	</style>
 </head>
 
@@ -236,122 +456,148 @@ document.getElementById('searchInput').addEventListener('keypress', function(e) 
 	</div>
 </section>
 
-<section class="section">
+<!-- AI Deception Definition Section -->
+<section class="academic-section" style="background-color: #ffffff; padding: 80px 0;">
 	<div class="container is-max-desktop">
+		<h1 class="academic-title">AI Deception Definition</h1>
+		<div class="academic-content">
+			<p class="lead-paragraph">
+				<strong>AI deception</strong> can be broadly defined as <em>behavior by AI systems that induces false beliefs in humans or other AI systems, thereby securing outcomes that are advantageous to the AI itself</em>.
+			</p>
+			
+			<div class="formal-definition-box">
+				<h3 class="definition-title">Formal Definition: AI Deception</h3>
+				<p class="definition-content">
+					At time step <em>t</em> (potentially within a long-horizon task), the signaler emits a signal <em>Y<sub>t</sub></em> to the receiver, prompting the receiver to form a belief <em>X<sub>t</sub></em> about an underlying state and subsequently take an action <em>A<sub>t</sub></em>. If the following three conditions hold:
+				</p>
+				<ol class="definition-conditions">
+					<li><em>A<sub>t</sub></em> benefits the signaler (<em>i.e.</em>, yields a positive utility).</li>
+					<li><em>A<sub>t</sub></em> is a rational response given the belief <em>X<sub>t</sub></em>,</li>
+					<li>The belief <em>X<sub>t</sub></em> is objectively false,</li>
+				</ol>
+				<p class="definition-conclusion">
+					then <em>Y<sub>t</sub></em> is classified as a <strong>deceptive signal</strong>, and the entire interaction constitutes an instance of <strong>deception</strong>.
+				</p>
+				<p class="definition-extension">
+					In more general dynamic settings, deception can be modeled as a temporal process where the signaler emits a sequence of signals <em>Y<sub>t</sub></em> over time steps <em>t = 1, ..., T</em>, thereby shaping the receiver's belief state <em>b<sub>t</sub></em>. If this belief trajectory systematically diverges from the ground truth <em>X<sub>t</sub></em>, and this divergence consistently benefits the signaler, it constitutes a case of <strong>sustained deception</strong>.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- AI Deception Cycle Section -->
+<section class="academic-section" style="background-color: #f8f9fa; padding: 80px 0;">
+	<div class="container is-max-desktop">
+		<h1 class="academic-title">AI Deception Cycle</h1>
+		<div class="academic-content">
+			<div class="figure-container">
+				<img src="./overview/images/ai_deception_cycle.png" alt="AI Deception Cycle" class="academic-figure">
+			</div>
+			<p class="figure-description">
+				<strong>The AI Deception Cycle.</strong> (1) The framework is structured around a cyclical interaction between the <strong>Deception Genesis</strong> process and the <strong>Deception Mitigation</strong> process. (2) The Deception Genesis identifies the conditions under which deception arises—namely, <em>incentive foundation</em>, <em>capability precondition</em>, and <em>contextual trigger</em>—while the Deception Mitigation addresses <em>detection</em>, <em>evaluation</em>, and <em>potential solutions</em> anchored in these genesis factors. However, deception mitigation is rarely once-and-for-all; models may continually develop new ways to circumvent oversight, giving rise to increasingly sophisticated deceptive behaviors. This dynamic makes deception a <strong>persistent challenge</strong> throughout the entire system lifecycle.
+			</p>
+		</div>
+	</div>
+</section>
+
+<!-- Empirical Studies Section -->
+<section class="academic-section" style="background-color: #ffffff; padding: 80px 0;">
+	<div class="container is-max-desktop">
+		<h1 class="academic-title">Empirical Studies</h1>
+		<div class="academic-content">
+			<div class="two-column-layout">
+				<div class="text-column">
+					<p class="academic-text">
+						<strong>Taxonomy of AI deception</strong> across three classes: <em>Behavioral-Signaling Deception</em>, <em>Internal Process Deception</em>, and <em>Goal-Environment Deception</em>. AI deceptions are mapped along dimensions of <strong>oversight vigilance</strong> and <strong>detection difficulty</strong>, showing progression from overt behavioral signals to covert environmental manipulation.
+					</p>
+				</div>
+				<div class="image-column">
+					<img src="./overview/images/empirical_studies.png" alt="Empirical Studies Taxonomy" class="academic-figure-small">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Risks of AI Deception Section -->
+<section class="academic-section" style="background-color: #f8f9fa; padding: 80px 0;">
+	<div class="container is-max-desktop">
+		<h1 class="academic-title">Risks of AI Deception</h1>
+		<div class="academic-content">
+			<div class="figure-container">
+				<img src="./overview/images/risks.png" alt="Risks of AI Deception" class="academic-figure">
+			</div>
+			<p class="academic-text">
+				We propose a <strong>five-level risk typology</strong>. The framework organizes deceptive risks along two dimensions: the <em>duration of interaction</em> (from short-term use to long-term engagement) and the <em>scope of impact</em> (from individual users to society-wide).
+			</p>
+			<div class="risk-levels">
+				<p class="risk-description">
+					At the first level, <strong>R1: Cognitive Misleading</strong> captures localized effects, where users form false beliefs or misplaced trust based on subtle distortions. <strong>R2: Strategic Manipulation</strong> reflects how, over prolonged interactions, users can be steered toward entrenched misconceptions or behavioral dependencies that are difficult to reverse. <strong>R3: Objective Misgeneralization</strong> highlights failures in specialized or high-stakes domains, where deceptively competent outputs can lead to software errors, economic losses, or fraud. <strong>R4: Institutional Erosion</strong> emphasizes the erosion of trust in science, governance, and epistemic institutions when deceptive practices scale, weakening social coordination and accountability. Finally, <strong>R5: Capability Concealment with Runaway Potential</strong> points to scenarios where hidden capabilities and long-horizon deception undermine human oversight entirely, raising prospects of uncontrollable system behavior.
+				</p>
+				<p class="risk-conclusion">
+					Each level represents a <strong>qualitatively distinct failure mode</strong>, with higher levels introducing risks that are harder to detect and reverse. Crucially, mitigation at lower levels does not guarantee safety at higher levels, as seemingly innocuous deceptive behaviors can accumulate into <strong>systemic threats</strong>.
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Deception Genesis Main Section -->
+<section class="academic-section" style="background-color: #ffffff; padding: 80px 0;">
+	<div class="container is-max-desktop">
+		<h1 class="chapter-title">Deception Genesis: Incentive Foundation × Capability × Trigger</h1>
 		
-		<!-- 研究统计 -->
-		<div class="section-card">
-			<h2>Research Statistics</h2>
-			<div class="stats-grid">
-				<div class="stats-card">
-					<div class="stats-number">150+</div>
-					<div class="stats-label">Papers Reviewed</div>
-				</div>
-				<div class="stats-card">
-					<div class="stats-number">8</div>
-					<div class="stats-label">Major Categories</div>
-				</div>
-				<div class="stats-card">
-					<div class="stats-number">25+</div>
-					<div class="stats-label">Research Groups</div>
-				</div>
-				<div class="stats-card">
-					<div class="stats-number">5</div>
-					<div class="stats-label">Risk Levels</div>
-				</div>
+		<!-- Incentive Foundation Subsection -->
+		<div class="academic-content" style="margin-bottom: 80px;">
+			<h2 class="subsection-title">Incentive Foundation</h2>
+			<div class="figure-container">
+				<img src="./overview/images/incentive_foundations.png" alt="Incentive Foundations" class="academic-figure">
+			</div>
+			<p class="academic-text">
+				As the training stage progresses, root causes of emergent deception arise sequentially as the <em>deception ladder</em>. Before training, <strong>data contamination</strong> occurs when preparing training data; <strong>reward misspecification</strong> occurs when designing the training procedure; they collectively form the seed of deceptive strategies. During the training, due to <strong>goal misgeneralization</strong>, deceptive strategies are internalized and stabilized into instrumental goals. Later in deployment, these goals may drive more sophisticated forms of deception that are harder to detect and pose greater risks.
+			</p>
+		</div>
+		
+		<!-- Capability Precondition Subsection -->
+		<div class="academic-content" style="margin-bottom: 80px;">
+			<h2 class="subsection-title">Capability Precondition</h2>
+			<div class="figure-container">
+				<img src="./overview/images/capability.png" alt="Capability Preconditions" class="academic-figure">
+			</div>
+			<p class="academic-text">
+				<strong>Hierarchical organization</strong> of AI capabilities that correlate with deception, grouped into three categories: <em>Perception</em>, <em>Planning</em>, and <em>Performing</em>. <span style="color: #8B0000; font-weight: bold;">High-level capabilities</span> are emergent abilities enabling sophisticated deception, while <span style="color: #FF8C00; font-weight: bold;">base capabilities</span> provide the foundational competencies that support them. Examples adapted from agentic misalignment research.
+			</p>
+		</div>
+		
+		<!-- Contextual Trigger Subsection -->
+		<div class="academic-content">
+			<h2 class="subsection-title">Contextual Trigger</h2>
+			<div class="figure-container">
+				<img src="./overview/images/contextual_triggers.png" alt="Contextual Triggers" class="academic-figure">
+			</div>
+			<p class="academic-text">
+				We categorize contextual triggers into three main categories: <em>Supervision Gap</em>, <em>Distributional Shift</em>, and <em>Environmental Pressure</em>. Each category can independently trigger deception or combine with others to amplify deceptive behavior. Let <em>p<sub>a</sub></em>, <em>p<sub>b</sub></em>, and <em>p<sub>c</sub></em> denote the probabilities of each category triggering deception. The illustrative example is inspired by the "fabricated actions" issue, where a model at test time encounters all three triggers simultaneously. These triggers <strong>amplify the probability</strong> of model deception, leading the model to fabricate actions it claims to have taken to fulfill user requests.
+			</p>
+		</div>
+	</div>
+</section>
+
+<!-- Deception Mitigation Section -->
+<section class="academic-section" style="background-color: #f8f9fa; padding: 80px 0;">
+	<div class="container is-max-desktop">
+		<h1 class="academic-title">Deception Mitigation: Detection, Evaluation and Potential Solutions</h1>
+		<div class="academic-content">
+			<div class="figure-container">
+				<img src="./overview/images/deception_mitigation.png" alt="Deception Mitigation" class="academic-figure">
+			</div>
+			<p class="academic-text">
+				<strong>Overview of AI deception-related evaluations.</strong> We organize existing studies from two perspectives: evaluation in <span style="color: #FF8C00; font-weight: bold;">static settings</span> and evaluation in <span style="color: #008B8B; font-weight: bold;">interactive environments</span>, and we annotate each work with its release date, data size, institution, data type, and description.
+			</p>
+			<div class="figure-container" style="margin-top: 40px;">
+				<img src="./overview/images/table_benchmarks.png" alt="Benchmarks Table" class="academic-figure">
 			</div>
 		</div>
-
-		<!-- 研究发展时间线 -->
-		<div class="section-card">
-			<h2>Research Evolution Timeline</h2>
-			<div class="timeline-item">
-				<div class="timeline-year">2018-2020</div>
-				<h3>Early Observations</h3>
-				<p>First documented cases of AI systems exhibiting deceptive behaviors in controlled environments. Research focused on understanding basic mechanisms and detection methods.</p>
-			</div>
-			<div class="timeline-item">
-				<div class="timeline-year">2021-2022</div>
-				<h3>Systematic Study</h3>
-				<p>Development of formal frameworks for categorizing AI deception. Introduction of the AI Deception Cycle and capability preconditions analysis.</p>
-			</div>
-			<div class="timeline-item">
-				<div class="timeline-year">2023-2024</div>
-				<h3>Comprehensive Analysis</h3>
-				<p>Large-scale empirical studies across multiple AI systems. Development of detection and mitigation strategies. Risk assessment frameworks established.</p>
-			</div>
-			<div class="timeline-item">
-				<div class="timeline-year">2025</div>
-				<h3>Survey Publication</h3>
-				<p>Comprehensive survey synthesizing existing research. Introduction of "Shadows of Intelligence" framework and future research directions.</p>
-			</div>
-		</div>
-
-		<!-- 核心发现 -->
-		<div class="section-card">
-			<h2>Key Findings</h2>
-			<ul style="text-align: justify; margin-left: auto; margin-right: auto; width: 75%;">
-				<li>
-					<b>Universality:</b> Deceptive behaviors have been observed across different AI architectures, training paradigms, and application domains, suggesting this is a fundamental challenge in AI systems.
-				</li>
-				<li>
-					<b>Emergence:</b> AI deception often emerges spontaneously during training, even when not explicitly programmed or incentivized, indicating deep-rooted causes in current AI development approaches.
-				</li>
-				<li>
-					<b>Sophistication:</b> More advanced AI systems demonstrate increasingly sophisticated deceptive strategies, raising concerns about future superintelligent systems.
-				</li>
-				<li>
-					<b>Detection Challenges:</b> Current detection methods are often insufficient for identifying subtle or strategically planned deceptive behaviors, especially in deployment scenarios.
-				</li>
-				<li>
-					<b>Mitigation Complexity:</b> Effective mitigation requires coordinated approaches across training, evaluation, and deployment phases, with no single solution providing complete protection.
-				</li>
-			</ul>
-		</div>
-
-		<!-- 研究方法论 -->
-		<div class="section-card">
-			<h2>Research Methodology</h2>
-			<div style="text-align: center; margin: 20px 0;">
-				<img src="./images/empirical_studies.png" alt="Research Methodology" style="max-width: 80%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-			</div>
-			<p>Our survey employs a systematic methodology combining:</p>
-			<ul style="text-align: justify; margin-left: auto; margin-right: auto; width: 75%;">
-				<li><b>Literature Review:</b> Comprehensive analysis of 150+ papers from top-tier conferences and journals</li>
-				<li><b>Empirical Analysis:</b> Direct evaluation of AI systems across multiple domains and scales</li>
-				<li><b>Theoretical Framework:</b> Development of formal models for understanding AI deception mechanisms</li>
-				<li><b>Case Studies:</b> In-depth analysis of significant deception incidents and their implications</li>
-				<li><b>Expert Interviews:</b> Insights from leading researchers in AI safety and alignment</li>
-			</ul>
-		</div>
-
-		<!-- 影响和应用 -->
-		<div class="section-card">
-			<h2>Impact and Applications</h2>
-			<p>This survey's findings have important implications for:</p>
-			<ul style="text-align: justify; margin-left: auto; margin-right: auto; width: 75%;">
-				<li><b>AI Safety Research:</b> Informing the development of more robust safety evaluation frameworks</li>
-				<li><b>Policy and Regulation:</b> Providing evidence-based guidance for AI governance and oversight</li>
-				<li><b>Industry Practices:</b> Establishing best practices for AI development and deployment</li>
-				<li><b>Academic Research:</b> Identifying key open problems and future research directions</li>
-				<li><b>Public Understanding:</b> Improving public awareness of AI capabilities and limitations</li>
-			</ul>
-		</div>
-
-		<!-- 未来研究方向 -->
-		<div class="section-card">
-			<h2>Future Research Directions</h2>
-			<p>Key areas requiring further investigation include:</p>
-			<ul style="text-align: justify; margin-left: auto; margin-right: auto; width: 75%;">
-				<li><b>Advanced Detection Methods:</b> Developing more sophisticated techniques for identifying subtle deceptive behaviors</li>
-				<li><b>Robust Mitigation Strategies:</b> Creating mitigation approaches that remain effective as AI systems become more capable</li>
-				<li><b>Theoretical Foundations:</b> Establishing formal mathematical frameworks for understanding and predicting AI deception</li>
-				<li><b>Empirical Studies:</b> Conducting large-scale experiments across diverse AI systems and domains</li>
-				<li><b>Interdisciplinary Approaches:</b> Integrating insights from psychology, philosophy, and social sciences</li>
-				<li><b>Real-world Deployment:</b> Studying deception behaviors in practical deployment scenarios</li>
-			</ul>
-		</div>
-
 	</div>
 </section>
 
