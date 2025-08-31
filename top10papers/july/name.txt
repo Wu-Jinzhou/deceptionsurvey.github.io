@@ -1,0 +1,69 @@
+### **Early Signs of Steganographic Capabilities in Frontier LLMs**
+
+- **Authors**: Artur Zolkowski et al.
+- **Date**: July 3, 2025
+- **Topic**: Evaluates steganography capabilities in frontier LLMs, focusing on how models could evade monitoring through encoding hidden information within seemingly benign generations. The study examines both passing encoded messages and performing encoded reasoning.
+- https://arxiv.org/abs/2507.02737
+
+### **Evaluating LLM Agent Collusion in Double Auctions**
+
+- **Authors**: Kushal Agrawal et al.
+- **Date**: July 2, 2025
+- **Topic**: Examines scenarios where LLM agents can choose to collude (secretive cooperation that harms another party) in simulated continuous double auction markets, analyzing how communication, model choice, and environmental pressures affect collusive tendencies.
+- https://arxiv.org/abs/2507.01413
+
+### **ICLShield: Exploring and Mitigating In-Context Learning Backdoor Attacks**
+
+- **Authors**: Zhiyao Ren et al.
+- **Date**: July 2, 2025
+- **Topic**: Addresses vulnerabilities in in-context learning where adversaries can manipulate LLM behaviors by poisoning demonstrations. Proposes the dual-learning hypothesis and introduces ICLShield defense mechanism.
+- https://arxiv.org/abs/2507.01321
+
+### **Manipulation Attacks by Misaligned AI: Risk Analysis and Safety Case Framework**
+
+- **Authors**: Rishane Dassanayake et al.
+- **Date**: July 18, 2025
+- **Topic**: Examines the risk of manipulation attacks from LLM-based agents, including cases where AI systems strategically deceive humans to remove safeguards. Proposes a structured safety framework: proving inability, enforcing control, and ensuring trustworthiness to defend against strategic AI-driven deception.
+- https://arxiv.org/abs/2507.12872
+
+### **CONSENSAGENT: Efficient and Effective Consensus in Multi-Agent LLM Systems through Sycophancy Mitigation**
+
+- **Authors**: Priya Pitre, Naren Ramakrishnan, Xuan Wang
+- **Date**: July 16, 2025
+- **Topic**: Proposes CONSENSAGENT, a system for mitigating sycophancy in multi-agent LLM setups. Encourages controlled dissent among agents to avoid echo-chamber agreement, improving consensus accuracy on six reasoning benchmarks while lowering computational costs.
+- [https://aclanthology.org/2025.findings-acl.1123/](https://aclanthology.org/2025.findings-acl.1141/)
+
+### **Adversarial Activation Patching: A Framework for Detecting and Mitigating Emergent Deception in Safety-Aligned Transformers**
+
+- **Authors**: Santhosh Kumar Ravindran
+- **Date**: July 14, 2025
+- **Topic**: Uses activation patching to identify and induce deceptive behavior in RLHF-trained models. Pinpoints sparse, deception-related neurons and layers, enabling targeted mitigation strategies by detecting anomalous activations or fine-tuning on patched datasets.
+- https://arxiv.org/abs/2507.09406
+
+### **Machine Bullshit: Characterizing the Emergent Disregard for Truth in Large Language Models**
+
+- **Authors**: Liang et al.
+- **Date**: July 10, 2025
+- **Topic**: Introduces a **Bullshit Index**, a metric to measure LLMs' indifference to truth. Identifies four forms: empty rhetoric, paltering, weasel words, and unverified claims. Finds RLHF and chain-of-thought prompting often exacerbate these behaviors.
+- https://arxiv.org/abs/2507.07484
+
+### **Language Models Can Subtly Deceive Without Lying: A Case Study on Strategic Phrasing in Legislation**
+
+- **Authors**: Samyak Dogra et al.
+- **Date**: July 16, 2025
+- **Topic**: Investigates how LLMs use subtle, strategic phrasing to influence legislative decision-making without producing outright falsehoods. Finds that deception success rates increase by up to 40% when phrasing strategies are optimized.
+- https://aclanthology.org/2025.acl-long.1600/
+
+### **When Truthful Representations Flip Under Deceptive Instructions?**
+
+- **Authors**: Xianxuan Long et al.
+- **Date**: July 10, 2025
+- **Topic**: Analyzes how hidden representations in transformer models change under deceptive instructions. Finds distinct latent patterns in middle layers when prompted to lie, suggesting potential for early detection of deceptive outputs using linear probes on activations.
+- https://arxiv.org/abs/2507.22149
+
+### **Benchmarking Deception Probes via Black-to-White Performance Boosts**
+
+- **Authors**: Avi Parrack, Carlo L. Attubato, Stefan Heimersheim
+- **Date**: July 12, 2025
+- **Topic**: Evaluates “deception probes” trained on LLM hidden activations to distinguish lies from truthful statements. Finds white-box probes outperform black-box detectors but only modestly, suggesting that current detection approaches remain fragile against adversarially deceptive models.
+- https://arxiv.org/abs/2507.12691
