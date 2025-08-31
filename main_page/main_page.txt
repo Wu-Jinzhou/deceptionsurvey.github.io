@@ -1,3 +1,55 @@
-# AI Deception Definition
+
+# AI Deception Webpage Contents
+In this webpage, we provide, but are not limited to, the following contents:
+这里根据网页内容导航栏补充一下
+
+If you find our survey helpful, please cite it in your publications by clicking the Copy button below.
+
+@article{pku2025deception,
+	title={Shadows of Intelligence: A Comprehensive Survey of AI Deception},
+	author={PKU-Alignment Team},
+	year={2025},
+	institution={Peking University},
+	url={https://deceptionsurvey.com/},
+	keywords={AI Deception, Survey, AI Safety, Alignment}
+	}
+
+
+# What is AI Deception?
 
 AI deception can be broadly defined as behavior by AI systems that induces false beliefs in humans or other AI systems, thereby securing outcomes that are advantageous to the AI itself
+
+Formal Definition:
+
+\begin{formaldefinitionbox}{AI Deception}
+At time step $t$ (potentially within a long-horizon task), the signaler emits a signal $Y_t$ to the receiver, prompting the receiver to form a belief $X_t$ about an underlying state and subsequently take an action $A_t$. If the following three conditions hold:
+
+\begin{enumerate}[left=0.3em]
+    \item $A_t$ benefits the signaler (\textit{i.e.}, yields a positive utility).
+    \item $A_t$ is a rational response given the belief $X_t$,
+    \item The belief $X_t$ is objectively false,
+\end{enumerate}
+
+then $Y_t$ is classified as a deceptive signal, and the entire interaction constitutes an instance of deception.
+
+# Why AI Deception Important
+
+./images/risks.png
+
+
+ AI deception -- where an AI system intentionally causes humans or other agents to form false beliefs -- has emerged as a critical concern \citep{park2024ai, ji2023ai, hendrycks2023overview}. While deceptive behavior in AI systems was once considered speculative, recent empirical studies have demonstrated that models can engage in various forms of deception, including lying, strategic withholding of information, and goal misrepresentation \citep{pan2023rewards, burns2022discovering, steinhardt2023emergent}. As capabilities improve, the risk that highly autonomous AI systems might engage in deceptive behaviors to achieve their objectives grows increasingly salient. AI deception is now recognized not only as a technical challenge but also as a critical concern across academia, industry, and policy. Notably, key strategy documents and summit declarations—such as the Bletchley Declaration \citep{bletchley} and the International Dialogues on AI Safety \citep{idais}—also highlight deception as a failure mode requiring coordinated governance and technical oversight.
+
+
+# How to 理解认识 AI Deception ?
+
+./images/ai_deception_cycle.png
+The AI Deception framework is structured around a cyclical interaction between the \textbf{Deception Genesis} process and the \textbf{Deception Mitigation} process.
+
+Deception Genesis:
+ (1) Incentive Foundation (Section ~\ref{subsec:incentive_foundations}): the underlying objectives or reward structures that create incentives for deceptive behavior. (2) Capability Precondition (Section ~\ref{subsec:capability_preconditions}): The model’s cognitive and algorithmic competencies that enable it to plan and execute deception. (3) Contextual Trigger (Section ~\ref{subsec:contextual_triggers}): External signals from the environment that activate or reinforce deception. The interplay among these factors gives rise to deceptive behaviors, and their dynamics influence the scope, subtlety, and detectability of deception.
+
+ Deception Mitigation:
+ It spans a continuum of approaches—from external and internal detection methods (Section~\ref{subsec:deception_detection}), to systematic evaluation protocols (Section~\ref{subsec:deception_evaluation}), and potential solutions targeting the three causal factors of deception, including both technical interventions and governance-oriented auditing efforts (Section~\ref{subsec:deception_solutions}).
+
+
+The two phases—deception genesis and mitigation—form an iterative cycle in which each phase updates the inputs of the next (see Figure~\ref{fig:deception_cycle}). This cycle, what we call  \emph{the deception cycle}, recurs throughout the system lifecycle, shaping the pursuit of increasingly aligned and trustworthy AI systems. We conceptualize it as a continual \emph{cat-and-mouse game}: as model capabilities grow, the \textit{shadow of intelligence} inevitably emerges, reflecting the uncontrollable aspects of advanced systems. Mitigation efforts aim to detect, evaluate, and resolve current deceptive behaviors to prevent further harm. Yet more capable models can develop novel forms of deception, including strategies to circumvent or exploit oversight, with mitigation mechanisms themselves introducing new challenges (\textit{e.g.}, monitoring tools incentivizing the evolution of deception specifically targeted at monitors~\citep{gupta2025rl,baker2025monitoring}). This ongoing dynamic underscores the intertwined technical and governance challenges on the path toward AGI.
