@@ -441,6 +441,20 @@ document.getElementById('searchInput').addEventListener('keypress', function(e) 
 		performSearch();
 	}
 });
+
+// 移动端导航栏汉堡菜单功能
+document.addEventListener('DOMContentLoaded', function() {
+	const navbarBurger = document.querySelector('.navbar-burger');
+	const navbarMenu = document.querySelector('.navbar-menu');
+	
+	if (navbarBurger && navbarMenu) {
+		navbarBurger.addEventListener('click', function() {
+			// 切换is-active类
+			navbarBurger.classList.toggle('is-active');
+			navbarMenu.classList.toggle('is-active');
+		});
+	}
+});
 </script>
 
 <footer class="footer">

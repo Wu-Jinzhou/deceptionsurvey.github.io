@@ -1,0 +1,3 @@
+# AI Deception Definition
+
+AI deception can be broadly defined as behavior by AI systems that induces false beliefs in humans or other AI systems, thereby securing outcomes that are advantageous to the AI itself
