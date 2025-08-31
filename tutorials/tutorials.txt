@@ -1,0 +1,41 @@
+1. AI Alignment 
+AI Alignment: A Comprehensive Survey:
+Website: https://alignmentsurvey.com/
+Paper: https://arxiv.org/abs/2310.19852
+中文视频解读（渲染出封面）：https://www.bilibili.com/video/BV1Pc411d7Fh/
+
+
+## What is the Alignment Objective?
+
+The RICE principles define four key characteristics that an aligned system should possess:
+Overview of the RICE Principles.
+放一张图片:
+./images/RICE.png
+Summarized by Alignment Survey Team. For more details, please refer to our paper.
+These four principles guide the alignment of an AI system with human intentions and values. They are not end goals in themselves but intermediate objectives in service of alignment.
+
+
+## How Can We Realize Alignment?
+放一张图片: 
+The alignment process can be decomposed into Forward Alignment (alignment training) and Backward Alignment (alignment consolidation).
+图片是 ./images/alignmentcycle.png 
+
+
+ICML 2025 Alignemnt Tutorial (PAIR-Lab):
+Alignment Methods for Language Models: A Machine Learning Perspective
+https://sites.google.com/view/icml-2025-tutorial-alignment
+
+Video(渲染出封面): https://drive.google.com/file/d/1B4XeFT9YGj5laEuAXJy2PdL0iK3pfE3H/view
+
+RLHF Tutorial (PAIR-Lab):
+https://alignmentsurvey.com/slides/
+
+
+2. Large Reasoning Models
+## DeepSeek-R1 解读
+Link: https://zhuanlan.zhihu.com/p/25272388537
+中文视频解读：https://www.bilibili.com/video/BV1DJwRevE6d/?vd_source=cf5b47be947f9cf8d43a3027418a7954
+
+## OpenAI O1 解读
+Link: https://www.thepaper.cn/newsDetail_forward_28757891
+中文视频解读：https://www.bilibili.com/video/BV15Rx5eXEnW/?share_source=copy_web&vd_source=2afa8fb4b53a4d7f17e585f6e4e644fd

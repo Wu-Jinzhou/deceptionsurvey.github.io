@@ -173,6 +173,10 @@
 					Overview
 				</a>
 				
+				<a class="navbar-item" href="top10papers.html" style="font-weight: 500; color: #000000; font-family: 'Times New Roman', serif; transition: all 0.3s ease; position: relative;" onmouseover="this.style.color='#DC143C'; this.style.transform='translateY(-2px)'" onmouseout="this.style.color='#000000'; this.style.transform='translateY(0)'">
+					Top-10 Papers
+				</a>
+				
 				<a class="navbar-item" href="tutorials.html" style="font-weight: 500; color: #000000; font-family: 'Times New Roman', serif; transition: all 0.3s ease; position: relative; background-color: rgba(220, 20, 60, 0.1);" onmouseover="this.style.color='#DC143C'; this.style.transform='translateY(-2px)'" onmouseout="this.style.color='#000000'; this.style.transform='translateY(0)'">
 					Tutorials
 				</a>
@@ -208,10 +212,6 @@
 						</a>
 					</div>
 				</div>
-				
-				<a class="navbar-item" href="top10papers.html" style="font-weight: 500; color: #000000; font-family: 'Times New Roman', serif; transition: all 0.3s ease; position: relative;" onmouseover="this.style.color='#DC143C'; this.style.transform='translateY(-2px)'" onmouseout="this.style.color='#000000'; this.style.transform='translateY(0)'">
-					Top-10 Papers
-				</a>
 			</div>
 
 			<div class="navbar-end">
@@ -278,272 +278,168 @@ document.getElementById('searchInput').addEventListener('keypress', function(e) 
 	<div class="hero-body">
 		<div class="container has-text-centered">
 			<h1 class="title is-1" style="color: white; font-family: 'Times New Roman', serif; margin-bottom: 20px;">
-				AI Deception Tutorials
+				AI Alignment Tutorials
 			</h1>
 			<h2 class="subtitle is-4" style="color: #f0f0f0; font-family: 'Times New Roman', serif;">
-				Learn to Detect, Understand, and Mitigate AI Deception
+				Learn AI Alignment and Large Reasoning Models
 			</h2>
 		</div>
 	</div>
 </section>
 
 <section class="section">
+	<!-- Chapter 1: AI Alignment -->
+	<div style="background-color: #ffffff; padding: 60px 0;">
 	<div class="container is-max-desktop">
+		<h1 style="color: #2c3e50; font-family: 'Times New Roman', serif; margin: 0 0 40px 0; text-align: center; font-size: 3em; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">CHAPTER 1: AI ALIGNMENT</h1>
 		
-		<!-- 学习路径 -->
-		<div class="section-card">
-			<h2>Learning Path</h2>
-			<p style="text-align: center; margin-bottom: 30px;">Follow our structured approach to master AI deception research</p>
-			
-			<div class="tutorial-card" onclick="expandTutorial(this)">
-				<div class="tutorial-level level-beginner">Beginner</div>
-				<span class="tutorial-duration">🕒 2-3 hours</span>
-				<h3><span class="step-number">1</span>Understanding AI Deception Basics</h3>
-				<p>Learn fundamental concepts, definitions, and real-world examples of AI deception.</p>
-				<div class="tutorial-content" style="display: none;">
-					<h4>What You'll Learn:</h4>
-					<ul>
-						<li>Definition and scope of AI deception</li>
-						<li>Historical examples and case studies</li>
-						<li>Basic taxonomy of deceptive behaviors</li>
-						<li>Distinction between intentional and emergent deception</li>
-					</ul>
-					<h4>Prerequisites:</h4>
-					<p>Basic understanding of machine learning concepts</p>
-					<h4>Resources:</h4>
-					<ul>
-						<li><a href="./paper.pdf" target="_blank">📖 Survey Paper - Section 1-2</a></li>
-						<li><a href="#" target="_blank">🎥 Introduction Video (Coming Soon)</a></li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="tutorial-card" onclick="expandTutorial(this)">
-				<div class="tutorial-level level-beginner">Beginner</div>
-				<span class="tutorial-duration">🕒 3-4 hours</span>
-				<h3><span class="step-number">2</span>AI Deception Cycle Framework</h3>
-				<p>Master the theoretical framework for understanding how AI deception emerges and evolves.</p>
-				<div class="tutorial-content" style="display: none;">
-					<h4>What You'll Learn:</h4>
-					<ul>
-						<li>Incentive foundations and their origins</li>
-						<li>Capability preconditions analysis</li>
-						<li>Contextual triggers in deployment</li>
-						<li>Framework application to real cases</li>
-					</ul>
-					<div class="code-snippet">
-# Example: Analyzing a deception case
-def analyze_deception_case(case):
-    incentives = identify_incentive_foundations(case)
-    capabilities = assess_capability_preconditions(case)
-    triggers = detect_contextual_triggers(case)
-    return DeceptionAnalysis(incentives, capabilities, triggers)
-					</div>
-				</div>
-			</div>
-
-			<div class="tutorial-card" onclick="expandTutorial(this)">
-				<div class="tutorial-level level-intermediate">Intermediate</div>
-				<span class="tutorial-duration">🕒 4-5 hours</span>
-				<h3><span class="step-number">3</span>Detection Techniques</h3>
-				<p>Learn practical methods for identifying deceptive behaviors in AI systems.</p>
-				<div class="tutorial-content" style="display: none;">
-					<h4>What You'll Learn:</h4>
-					<ul>
-						<li>Output-based detection methods</li>
-						<li>Internal state analysis techniques</li>
-						<li>Behavioral pattern recognition</li>
-						<li>Statistical anomaly detection</li>
-					</ul>
-					<div class="code-snippet">
-# Example detection pipeline
-import torch
-from transformers import AutoModel
-
-def detect_deception(model_output, hidden_states):
-    # Analyze output consistency
-    consistency_score = analyze_consistency(model_output)
-    
-    # Check internal representations
-    attention_patterns = analyze_attention(hidden_states)
-    
-    # Combine signals
-    deception_score = combine_signals(consistency_score, attention_patterns)
-    return deception_score > threshold
-					</div>
-				</div>
-			</div>
-
-			<div class="tutorial-card" onclick="expandTutorial(this)">
-				<div class="tutorial-level level-intermediate">Intermediate</div>
-				<span class="tutorial-duration">🕒 3-4 hours</span>
-				<h3><span class="step-number">4</span>Risk Assessment Framework</h3>
-				<p>Understand how to evaluate and categorize deception risks using our 5-level taxonomy.</p>
-				<div class="tutorial-content" style="display: none;">
-					<h4>Risk Levels:</h4>
-					<ul>
-						<li><b>R1:</b> Cognitive Misleading - Surface-level deceptions</li>
-						<li><b>R2:</b> Strategic Manipulation - Behavioral deceptions</li>
-						<li><b>R3:</b> Objective Misgeneralization - Goal-level deceptions</li>
-						<li><b>R4:</b> Institutional Erosion - System-level impacts</li>
-						<li><b>R5:</b> Capability Concealment - Existential risks</li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="tutorial-card" onclick="expandTutorial(this)">
-				<div class="tutorial-level level-advanced">Advanced</div>
-				<span class="tutorial-duration">🕒 5-6 hours</span>
-				<h3><span class="step-number">5</span>Mitigation Strategies</h3>
-				<p>Implement practical solutions for preventing and controlling AI deception.</p>
-				<div class="tutorial-content" style="display: none;">
-					<h4>What You'll Learn:</h4>
-					<ul>
-						<li>Training-based prevention methods</li>
-						<li>Evaluation framework design</li>
-						<li>Deployment monitoring systems</li>
-						<li>Control mechanism implementation</li>
-					</ul>
-					<div class="code-snippet">
-# Example mitigation framework
-class DeceptionMitigation:
-    def __init__(self):
-        self.detector = DeceptionDetector()
-        self.monitor = BehaviorMonitor()
-        self.controller = ResponseController()
-    
-    def mitigate(self, ai_system, context):
-        if self.detector.detect(ai_system.output):
-            self.controller.apply_intervention(ai_system)
-            self.monitor.log_incident(context)
-					</div>
-				</div>
-			</div>
-
-			<div class="tutorial-card" onclick="expandTutorial(this)">
-				<div class="tutorial-level level-advanced">Advanced</div>
-				<span class="tutorial-duration">🕒 6-8 hours</span>
-				<h3><span class="step-number">6</span>Research Project</h3>
-				<p>Apply your knowledge to conduct original research on AI deception.</p>
-				<div class="tutorial-content" style="display: none;">
-					<h4>Project Options:</h4>
-					<ul>
-						<li>Implement a novel detection algorithm</li>
-						<li>Analyze deception in a specific AI domain</li>
-						<li>Develop mitigation techniques</li>
-						<li>Conduct empirical evaluation studies</li>
-					</ul>
-					<h4>Deliverables:</h4>
-					<ul>
-						<li>Research proposal and methodology</li>
-						<li>Implementation and experiments</li>
-						<li>Results analysis and interpretation</li>
-						<li>Final report and presentation</li>
-					</ul>
-				</div>
-			</div>
+		<!-- AI Alignment Survey -->
+		<h2 style="color: #B22222; font-family: 'Times New Roman', serif; margin: 40px 0 25px 0; font-size: 2em; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">AI ALIGNMENT: A COMPREHENSIVE SURVEY</h2>
+		
+		<h3 style="color: #2c3e50; margin: 25px 0 15px 0; font-size: 1.3em;">Main Resources:</h3>
+		<ul style="font-size: 1.1em; line-height: 1.6;">
+			<li><a href="https://alignmentsurvey.com/" target="_blank" style="color: #B22222; font-weight: bold;">Official Website: alignmentsurvey.com</a></li>
+			<li><a href="https://arxiv.org/abs/2310.19852" target="_blank" style="color: #B22222; font-weight: bold;">Research Paper: ArXiv Link</a></li>
+			<li><a href="https://www.bilibili.com/video/BV1Pc411d7Fh/" target="_blank" style="color: #B22222; font-weight: bold;">中文视频解读 (Bilibili)</a></li>
+		</ul>
+		
+		<h3 style="color: #2c3e50; margin: 25px 0 15px 0; font-size: 1.3em; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">WHAT IS THE ALIGNMENT OBJECTIVE?</h3>
+		<p style="font-size: 1.1em; line-height: 1.6;">The RICE principles define four key characteristics that an aligned system should possess:</p>
+		
+		<div style="text-align: center; margin: 30px 0;">
+			<img src="./tutorials/images/RICE.png" alt="RICE Principles Overview" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+			<p style="font-style: italic; color: #666; margin-top: 10px;">Overview of the RICE Principles - Summarized by Alignment Survey Team</p>
 		</div>
-
-		<!-- 工具和资源 -->
-		<div class="section-card">
-			<h2>Tools and Resources</h2>
-			<div class="resource-grid">
-				<div class="resource-card">
-					<div class="resource-icon">📚</div>
-					<h3>Reading Materials</h3>
-					<p>Comprehensive collection of papers, books, and articles on AI deception research.</p>
-				</div>
-				<div class="resource-card">
-					<div class="resource-icon">💻</div>
-					<h3>Code Repositories</h3>
-					<p>Open-source implementations of detection algorithms and mitigation frameworks.</p>
-				</div>
-				<div class="resource-card">
-					<div class="resource-icon">🔬</div>
-					<h3>Datasets</h3>
-					<p>Curated datasets for training and evaluating deception detection systems.</p>
-				</div>
-				<div class="resource-card">
-					<div class="resource-icon">🎯</div>
-					<h3>Evaluation Tools</h3>
-					<p>Standardized benchmarks and metrics for assessing AI deception research.</p>
-				</div>
-			</div>
-		</div>
-
-		<!-- 实践案例 -->
-		<div class="section-card">
-			<h2>Hands-on Exercises</h2>
-			<div class="tutorial-card">
-				<h3>🔍 Exercise 1: Deception Detection</h3>
-				<p>Implement a basic deception detector using attention patterns analysis.</p>
-				<div class="code-snippet">
-# Your task: Complete the detection function
-def detect_inconsistency(model_outputs, confidence_scores):
-    # TODO: Implement detection logic
-    # Hint: Look for mismatches between confidence and actual performance
-    pass
-</div>
-			</div>
-
-			<div class="tutorial-card">
-				<h3>📊 Exercise 2: Risk Assessment</h3>
-				<p>Classify deception cases according to our 5-level risk taxonomy.</p>
-				<div class="code-snippet">
-# Case study examples to classify:
-cases = [
-    "AI chatbot provides misleading medical advice",
-    "Autonomous vehicle hides collision data from sensors",
-    "Language model optimizes for reward hacking",
-    # ... more cases to analyze
-]
-</div>
-			</div>
-
-			<div class="tutorial-card">
-				<h3>⚙️ Exercise 3: Mitigation Design</h3>
-				<p>Design a comprehensive mitigation strategy for a specific AI application.</p>
-				<div class="code-snippet">
-# Framework template
-class CustomMitigation:
-    def __init__(self, application_domain):
-        self.domain = application_domain
-        # TODO: Initialize domain-specific components
-    
-    def apply_safeguards(self):
-        # TODO: Implement safeguard logic
-        pass
-</div>
-			</div>
-		</div>
-
-		<!-- 社区和支持 -->
-		<div class="section-card">
-			<h2>Community and Support</h2>
-			<p>Join our community of researchers and practitioners working on AI deception:</p>
-			<ul style="text-align: justify; margin-left: auto; margin-right: auto; width: 75%;">
-				<li><b>Discussion Forum:</b> Ask questions and share insights with fellow researchers</li>
-				<li><b>Weekly Seminars:</b> Attend virtual presentations on latest developments</li>
-				<li><b>Research Groups:</b> Collaborate on ongoing projects and initiatives</li>
-				<li><b>Mentorship Program:</b> Get guidance from experienced researchers in the field</li>
-				<li><b>Newsletter:</b> Stay updated with latest papers and developments</li>
+		
+		<div style="background: #f8f9fa; padding: 25px; border-radius: 8px; margin: 25px 0; border-left: 5px solid #B22222;">
+			<h4 style="color: #B22222; margin-bottom: 20px; font-size: 1.2em; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">THE FOUR RICE PRINCIPLES:</h4>
+			<ul style="font-size: 1.1em; line-height: 1.8;">
+				<li><strong style="color: #2c3e50;">ROBUSTNESS</strong> - Systems remain aligned under diverse conditions</li>
+				<li><strong style="color: #2c3e50;">INTERPRETABILITY</strong> - Human understanding of system behavior</li>
+				<li><strong style="color: #2c3e50;">CONTROLLABILITY</strong> - Human ability to guide system actions</li>
+				<li><strong style="color: #2c3e50;">ETHICAL ALIGNMENT</strong> - Adherence to human values and ethics</li>
 			</ul>
+			<p style="margin-top: 20px; font-style: italic; font-size: 1.05em;">These four principles guide the alignment of an AI system with human intentions and values. They are not end goals in themselves but intermediate objectives in service of alignment.</p>
+		</div>
+		
+		<h3 style="color: #2c3e50; margin: 25px 0 15px 0; font-size: 1.3em; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">HOW CAN WE REALIZE ALIGNMENT?</h3>
+		<p style="font-size: 1.1em; line-height: 1.6;">The alignment process can be decomposed into Forward Alignment (alignment training) and Backward Alignment (alignment consolidation).</p>
+		
+		<div style="text-align: center; margin: 30px 0;">
+			<img src="./tutorials/images/alignmentcycle.png" alt="Alignment Cycle" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+			<p style="font-style: italic; color: #666; margin-top: 10px;">The Alignment Process: Forward and Backward Alignment Cycle</p>
 		</div>
 
+		<!-- ICML Tutorial -->
+		<h2 style="color: #B22222; font-family: 'Times New Roman', serif; margin: 50px 0 25px 0; font-size: 2em; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">ICML 2025 ALIGNMENT TUTORIAL</h2>
+		
+		<h3 style="color: #2c3e50; margin: 25px 0 15px 0; font-size: 1.3em;">Academic Resources:</h3>
+		<ul style="font-size: 1.1em; line-height: 1.6;">
+			<li><a href="https://sites.google.com/view/icml-2025-tutorial-alignment" target="_blank" style="color: #B22222; font-weight: bold;">Tutorial Website (PAIR-Lab)</a></li>
+			<li><a href="https://drive.google.com/file/d/1B4XeFT9YGj5laEuAXJy2PdL0iK3pfE3H/view" target="_blank" style="color: #B22222; font-weight: bold;">Video Tutorial (Google Drive)</a></li>
+		</ul>
+		
+		<h3 style="color: #2c3e50; margin: 25px 0 15px 0; font-size: 1.3em;">What You'll Learn:</h3>
+		<ul style="font-size: 1.1em; line-height: 1.6;">
+			<li>State-of-the-art alignment techniques</li>
+			<li>Research methodologies in alignment</li>
+			<li>Current challenges and future directions</li>
+			<li>Practical implementation strategies</li>
+		</ul>
+		
+		<p style="font-size: 1.1em; margin: 20px 0;"><strong>Target Audience:</strong> Researchers, graduate students, and practitioners working on AI safety and alignment</p>
+
+		<!-- RLHF Tutorial -->
+		<h2 style="color: #B22222; font-family: 'Times New Roman', serif; margin: 50px 0 25px 0; font-size: 2em; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">RLHF TUTORIAL</h2>
+		
+		<h3 style="color: #2c3e50; margin: 25px 0 15px 0; font-size: 1.3em;">Resources:</h3>
+		<ul style="font-size: 1.1em; line-height: 1.6;">
+			<li><a href="https://alignmentsurvey.com/slides/" target="_blank" style="color: #B22222; font-weight: bold;">Tutorial Slides (PAIR-Lab)</a></li>
+		</ul>
+		
+		<h3 style="color: #2c3e50; margin: 25px 0 15px 0; font-size: 1.3em;">Key Topics:</h3>
+		<ul style="font-size: 1.1em; line-height: 1.6;">
+			<li>Human feedback integration in RL</li>
+			<li>Preference learning and modeling</li>
+			<li>Reward model training</li>
+			<li>Policy optimization with human preferences</li>
+			<li>Applications in language models and robotics</li>
+		</ul>
+		
+		<h3 style="color: #2c3e50; margin: 25px 0 15px 0; font-size: 1.3em;">Prerequisites:</h3>
+		<ul style="font-size: 1.1em; line-height: 1.6;">
+			<li>Basic reinforcement learning knowledge</li>
+			<li>Understanding of neural networks</li>
+			<li>Familiarity with PyTorch/TensorFlow</li>
+		</ul>
 	</div>
+	</div>
+
+	<!-- Chapter 2: Large Reasoning Models -->
+	<div style="background-color: #f8f9fa; padding: 60px 0;">
+	<div class="container is-max-desktop">
+		<h1 style="color: #2c3e50; font-family: 'Times New Roman', serif; margin: 0 0 40px 0; text-align: center; font-size: 3em; text-shadow: 2px 2px 4px rgba(0,0,0,0.1);">CHAPTER 2: LARGE REASONING MODELS</h1>
+		
+		<!-- DeepSeek-R1 -->
+		<h2 style="color: #B22222; font-family: 'Times New Roman', serif; margin: 50px 0 25px 0; font-size: 2em; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">DEEPSEEK-R1 解读</h2>
+		
+		<h3 style="color: #2c3e50; margin: 25px 0 15px 0; font-size: 1.3em;">学习资源:</h3>
+		<ul style="font-size: 1.1em; line-height: 1.6;">
+			<li><a href="https://zhuanlan.zhihu.com/p/25272388537" target="_blank" style="color: #B22222; font-weight: bold;">详细解读文章 (知乎专栏)</a></li>
+			<li><a href="https://www.bilibili.com/video/BV1DJwRevE6d/?vd_source=cf5b47be947f9cf8d43a3027418a7954" target="_blank" style="color: #B22222; font-weight: bold;">中文视频解读 (Bilibili)</a></li>
+		</ul>
+
+		<!-- OpenAI O1 -->
+		<h2 style="color: #B22222; font-family: 'Times New Roman', serif; margin: 50px 0 25px 0; font-size: 2em; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">OPENAI O1 解读</h2>
+		
+		<h3 style="color: #2c3e50; margin: 25px 0 15px 0; font-size: 1.3em;">学习资源:</h3>
+		<ul style="font-size: 1.1em; line-height: 1.6;">
+			<li><a href="https://www.thepaper.cn/newsDetail_forward_28757891" target="_blank" style="color: #B22222; font-weight: bold;">深度报道文章 (澎湃新闻)</a></li>
+			<li><a href="https://www.bilibili.com/video/BV15Rx5eXEnW/?share_source=copy_web&vd_source=2afa8fb4b53a4d7f17e585f6e4e644fd" target="_blank" style="color: #B22222; font-weight: bold;">中文视频解读 (Bilibili)</a></li>
+		</ul>
+	</div>
+	</div>
+
 </section>
 
 <script>
-function expandTutorial(element) {
-	const content = element.querySelector('.tutorial-content');
-	if (content.style.display === 'none') {
-		content.style.display = 'block';
-		element.style.backgroundColor = '#f8f9fa';
-	} else {
-		content.style.display = 'none';
-		element.style.backgroundColor = 'white';
+// 搜索页面内容
+function performSearch() {
+	const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+	
+	if (!searchTerm) {
+		alert('请输入搜索内容');
+		return;
+	}
+	
+	// 搜索页面内容
+	const sections = document.querySelectorAll('h1, h2, h3, h4, p, li');
+	let found = false;
+	
+	sections.forEach(section => {
+		const text = section.textContent.toLowerCase();
+		if (text.includes(searchTerm)) {
+			section.scrollIntoView({ behavior: 'smooth', block: 'center' });
+			section.style.backgroundColor = '#ffeb3b';
+			setTimeout(() => {
+				section.style.backgroundColor = '';
+			}, 3000);
+			found = true;
+			return;
+		}
+	});
+	
+	if (!found) {
+		alert(`未找到相关内容: "${searchTerm}"`);
 	}
 }
+
+// 回车键搜索
+document.getElementById('searchInput').addEventListener('keypress', function(e) {
+	if (e.key === 'Enter') {
+		performSearch();
+	}
+});
 </script>
 
 <footer class="footer">
