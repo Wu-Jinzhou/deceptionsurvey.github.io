@@ -1,0 +1,59 @@
+/* 导航栏统一字体CSS文件 - 确保在所有部署平台上保持一致 */
+
+/* 导航栏品牌名称字体 */
+.navbar-brand .navbar-item {
+  font-family: 'Times New Roman', 'Times', serif !important;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #000000;
+}
+
+/* 导航栏菜单项字体 */
+.navbar-menu .navbar-item,
+.navbar-menu .navbar-link {
+  font-family: 'Times New Roman', 'Times', serif !important;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* 下拉菜单字体 */
+.navbar-dropdown .navbar-item {
+  font-family: 'Times New Roman', 'Times', serif !important;
+}
+
+/* 搜索框字体 */
+.navbar-end .input {
+  font-family: 'Times New Roman', 'Times', serif !important;
+}
+
+/* 确保兼容性的字体回退 */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .navbar-brand .navbar-item,
+  .navbar-menu .navbar-item,
+  .navbar-menu .navbar-link,
+  .navbar-dropdown .navbar-item,
+  .navbar-end .input {
+    font-family: 'Times New Roman', 'Times', serif !important;
+  }
+}
+
+/* Firefox兼容性 */
+@-moz-document url-prefix() {
+  .navbar-brand .navbar-item,
+  .navbar-menu .navbar-item,
+  .navbar-menu .navbar-link,
+  .navbar-dropdown .navbar-item,
+  .navbar-end .input {
+    font-family: 'Times New Roman', 'Times', serif !important;
+  }
+}
+
+/* 确保字体在所有浏览器中正确加载 */
+.navbar {
+  font-family: 'Times New Roman', 'Times', serif !important;
+}
+
+/* 针对不同操作系统的字体回退 */
+.navbar * {
+  font-family: 'Times New Roman', 'Times', 'Liberation Serif', 'DejaVu Serif', serif !important;
+}
