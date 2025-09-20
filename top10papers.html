@@ -348,6 +348,22 @@ function toggleReadingGuide() {
 	}
 }
 
+// Toggle July reading guide
+function toggleJulyReadingGuide() {
+	const content = document.getElementById('july-reading-guide-content');
+	const toggle = document.getElementById('july-guide-toggle');
+	
+	if (content.style.display === 'none' || content.style.display === '') {
+		content.style.display = 'block';
+		toggle.style.transform = 'rotate(180deg)';
+		toggle.textContent = '▲';
+	} else {
+		content.style.display = 'none';
+		toggle.style.transform = 'rotate(0deg)';
+		toggle.textContent = '▼';
+	}
+}
+
 function filterPapers(category) {
 	const papers = document.querySelectorAll('.paper-card');
 	const buttons = document.querySelectorAll('.filter-btn');
@@ -380,7 +396,10 @@ function filterPapers(category) {
 				Most Influential Research in AI Deception Field
 			</h2>
 			<h3 class="subtitle is-5" style="color: #ffd700; font-family: 'Times New Roman', 'Times', serif; margin-top: 15px; font-weight: bold;">
-				📅 Monthly Update - July 2025
+				📅 Monthly Update - August 2025
+			</h3>
+			<h3 class="subtitle is-5" style="color: #ffd700; font-family: 'Times New Roman', 'Times', serif; margin-top: 15px; font-weight: bold;">
+				<a href="#july-archive" style="color: #ffd700; text-decoration: underline; font-family: 'Times New Roman', 'Times', serif;">📚 View July 2025 Archive</a>
 			</h3>
 		</div>
 	</div>
@@ -395,7 +414,7 @@ function filterPapers(category) {
 				<h2 style="color: #2c3e50; margin: 0; font-family: 'Times New Roman', 'Times', serif; font-size: 1.5em;">📚 Reading Recommendations</h2>
 				<span id="guide-toggle" style="font-size: 1.5em; color: #6c757d; transition: transform 0.3s ease;">▼</span>
 			</div>
-			<p style="margin: 10px 0 0 0; color: #495057;">Click to view our curated reading guide for July 2025's latest AI deception research</p>
+			<p style="margin: 10px 0 0 0; color: #495057;">Click to view our curated reading guide for August 2025's latest AI deception research</p>
 			
 			<div id="reading-guide-content" style="display: none; margin-top: 20px; border-top: 1px solid #dee2e6; padding-top: 20px;">
 				<div style="background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
@@ -403,27 +422,27 @@ function filterPapers(category) {
 					<div style="display: grid; gap: 15px;">
 						<div style="border-left: 4px solid #B22222; padding-left: 15px;">
 							<strong style="color: #2c3e50;">Foundation (Papers #1-2)</strong>
-							<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Start with <em>"Manipulation Attacks"</em> and <em>"Strategic Phrasing"</em> to understand the current threat landscape and subtle deception techniques.</p>
+							<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Start with <em>"Beyond Prompt-Induced Lies"</em> and <em>"Caught in the Act"</em> to understand autonomous deception and detection mechanisms.</p>
 						</div>
 						<div style="border-left: 4px solid #DC143C; padding-left: 15px;">
-							<strong style="color: #2c3e50;">Detection Methods (Papers #3-4, #6)</strong>
-							<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Learn cutting-edge detection techniques: <em>activation patching</em>, <em>deception probes</em>, and <em>representation analysis</em>.</p>
+							<strong style="color: #2c3e50;">Detection & Monitoring (Papers #2, #6, #7)</strong>
+							<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Learn advanced detection techniques: <em>linear probes</em>, <em>weak-to-strong monitoring</em>, and <em>multi-agent disinformation detection</em>.</p>
 						</div>
 						<div style="border-left: 4px solid #FF6B6B; padding-left: 15px;">
-							<strong style="color: #2c3e50;">Evaluation & Measurement (Paper #5)</strong>
-							<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Understand how to measure AI deception through the innovative <em>"Bullshit Index"</em> framework.</p>
+							<strong style="color: #2c3e50;">Emergent Misalignment (Papers #3-4)</strong>
+							<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Understand reward hacking and systematic misalignment through <em>"School of Reward Hacks"</em> and red-teaming studies.</p>
 						</div>
 						<div style="border-left: 4px solid #4ECDC4; padding-left: 15px;">
-							<strong style="color: #2c3e50;">Emerging Threats (Paper #7)</strong>
-							<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Explore steganographic capabilities in frontier models and hidden communication channels.</p>
+							<strong style="color: #2c3e50;">Sycophancy & Relationships (Paper #5)</strong>
+							<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Explore parasocial relationships and sycophancy in AI systems and their detection frameworks.</p>
 						</div>
 						<div style="border-left: 4px solid #45B7D1; padding-left: 15px;">
-							<strong style="color: #2c3e50;">Mitigation Strategies (Papers #8-9)</strong>
-							<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Study defense approaches: <em>CONSENSAGENT</em> for sycophancy mitigation and <em>ICLShield</em> for backdoor defense.</p>
+							<strong style="color: #2c3e50;">Attack Vectors (Papers #8-9)</strong>
+							<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Study backdoor attacks in VLMs and steganography vulnerabilities in LLMs.</p>
 						</div>
 						<div style="border-left: 4px solid #96CEB4; padding-left: 15px;">
-							<strong style="color: #2c3e50;">Advanced Applications (Paper #10)</strong>
-							<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Examine deception in multi-agent economic scenarios and collusive behaviors.</p>
+							<strong style="color: #2c3e50;">Practical Deception (Paper #10)</strong>
+							<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Examine realistic scam simulation and multi-turn deceptive conversations.</p>
 						</div>
 					</div>
 				</div>
@@ -432,10 +451,10 @@ function filterPapers(category) {
 					<div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
 						<h4 style="color: #B22222; margin-bottom: 10px;">🔍 Research Categories</h4>
 						<ul style="margin: 0; padding-left: 20px;">
-							<li><strong>Detection & Analysis:</strong> Papers #3, #4, #6</li>
-							<li><strong>Mitigation & Defense:</strong> Papers #8, #9</li>
-							<li><strong>Empirical Studies:</strong> Papers #2, #5, #7, #10</li>
-							<li><strong>Theoretical Frameworks:</strong> Paper #1</li>
+							<li><strong>Detection & Analysis:</strong> Papers #2, #6, #7</li>
+							<li><strong>Emergent Behavior:</strong> Papers #1, #3, #4</li>
+							<li><strong>Attack Vectors:</strong> Papers #8, #9, #10</li>
+							<li><strong>Systematic Studies:</strong> Papers #5</li>
 						</ul>
 					</div>
 					<div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
@@ -451,7 +470,7 @@ function filterPapers(category) {
 				
 				<div style="background: linear-gradient(45deg, #f8f9fa, #e9ecef); border-radius: 8px; padding: 15px; text-align: center;">
 					<p style="margin: 0; color: #495057; font-style: italic;">
-						🌟 All papers are from <strong>July 2025</strong>, ensuring you're accessing the most current developments in AI deception research.
+						🌟 All papers are from <strong>August 2025</strong>, ensuring you're accessing the most current developments in AI deception research.
 						<br>Complement your reading with our <a href="tutorials.html" style="color: #B22222;">tutorials</a> and <a href="overview.html" style="color: #B22222;">overview</a> sections.
 					</p>
 				</div>
@@ -467,228 +486,526 @@ function filterPapers(category) {
 			<button class="filter-btn" onclick="filterPapers('mitigation')">Mitigation</button>
 		</div>
 
-		<!-- 论文列表 -->
+		<!-- August 2025 Papers -->
 		<div class="paper-card">
 			<div class="paper-rank">1</div>
-			<div class="impact-score">🔥 Latest July 2025</div>
+			<div class="impact-score">🔥 Latest August 2025</div>
 			<div style="text-align: center; margin: 20px 40px;">
-				<img src="./top10papers/july/images/Manipulation Attacks by Misaligned AI.png" alt="Manipulation Attacks by Misaligned AI" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				<img src="./top10papers/august/images/Beyond Prompt-Induced Lies.png" alt="Beyond Prompt-Induced Lies" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 			</div>
-			<div class="paper-title">Manipulation Attacks by Misaligned AI: Risk Analysis and Safety Case Framework</div>
-			<div class="paper-authors">Rishane Dassanayake et al.</div>
-			<div class="paper-venue">July 18, 2025</div>
+			<div class="paper-title">Beyond Prompt-Induced Lies: Investigating LLM Deception on Benign Prompts</div>
+			<div class="paper-authors">Zhaomin Wu, Zhaorun Chen, Hongzhan Lin, Jingyi Ren</div>
+			<div class="paper-venue">August 8, 2025</div>
 			<div class="paper-abstract">
-				Examines the risk of manipulation attacks from LLM-based agents, including cases where AI systems strategically deceive humans to remove safeguards. Proposes a structured safety framework: proving inability, enforcing control, and ensuring trustworthiness to defend against strategic AI-driven deception.
+				Moves beyond explicitly prompted deception to investigate self-initiated deceptive behavior in LLMs on benign prompts. Introduces two novel metrics - Deceptive Intention Score and Deceptive Behavior Score - to quantify likelihood of deception. Testing 14 leading LLMs revealed increasing deceptive tendencies correlating with task complexity, raising critical concerns about autonomous deceptive capabilities in deployed systems.
 			</div>
 			<div style="margin-left: 40px; margin-bottom: 15px;">
-				<span class="methodology-tag">Theoretical</span>
-				<span class="methodology-tag">Safety Framework</span>
-				<span class="methodology-tag">Risk Analysis</span>
+				<span class="methodology-tag">Empirical</span>
+				<span class="methodology-tag">Autonomous Deception</span>
+				<span class="methodology-tag">Evaluation Metrics</span>
 			</div>
 			<div class="paper-links">
-				<a href="https://arxiv.org/abs/2507.12872" class="paper-link" target="_blank">📄 Paper</a>
+				<a href="https://arxiv.org/abs/2508.06361" class="paper-link" target="_blank">📄 Paper</a>
 			</div>
 		</div>
 
 		<div class="paper-card">
 			<div class="paper-rank">2</div>
-			<div class="impact-score">🔥 Latest July 2025</div>
+			<div class="impact-score">🔥 Latest August 2025</div>
 			<div style="text-align: center; margin: 20px 40px;">
-				<img src="./top10papers/july/images/Language Models can Subtly Deceive Without Lying.png" alt="Language Models can Subtly Deceive Without Lying" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				<img src="./top10papers/august/images/Caught in the Act.png" alt="Caught in the Act" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 			</div>
-			<div class="paper-title">Language Models Can Subtly Deceive Without Lying: A Case Study on Strategic Phrasing in Legislation</div>
-			<div class="paper-authors">Samyak Dogra et al.</div>
-			<div class="paper-venue">ACL 2025</div>
+			<div class="paper-title">Caught in the Act: A Mechanistic Approach to Detecting Deception</div>
+			<div class="paper-authors">Gerard Boxo, Shivam Raval, Daniel Yoo, Ryan Socha</div>
+			<div class="paper-venue">August 27, 2025</div>
 			<div class="paper-abstract">
-				Investigates how LLMs use subtle, strategic phrasing to influence legislative decision-making without producing outright falsehoods. Finds that deception success rates increase by up to 40% when phrasing strategies are optimized.
+				Demonstrates that linear probes on internal LLM activations can detect deception with >90% accuracy across Llama and Qwen models ranging from 1.5B to 14B parameters. Identifies multiple linear directions encoding deception and shows improved accuracy on larger models, providing a mechanistic foundation for real-time deception detection in deployed systems.
 			</div>
 			<div style="margin-left: 40px; margin-bottom: 15px;">
-				<span class="methodology-tag">Empirical</span>
-				<span class="methodology-tag">Strategic Deception</span>
-				<span class="methodology-tag">Linguistic Manipulation</span>
+				<span class="methodology-tag">Detection</span>
+				<span class="methodology-tag">Linear Probes</span>
+				<span class="methodology-tag">Mechanistic Analysis</span>
 			</div>
 			<div class="paper-links">
-				<a href="https://aclanthology.org/2025.acl-long.1600/" class="paper-link" target="_blank">📄 Paper</a>
+				<a href="https://arxiv.org/abs/2508.19505" class="paper-link" target="_blank">📄 Paper</a>
 			</div>
 		</div>
 
 		<div class="paper-card">
 			<div class="paper-rank">3</div>
-			<div class="impact-score">🔥 Latest July 2025</div>
+			<div class="impact-score">🔥 Latest August 2025</div>
 			<div style="text-align: center; margin: 20px 40px;">
-				<img src="./top10papers/july/images/Adversarial Activation Patching.png" alt="Adversarial Activation Patching" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				<img src="./top10papers/august/images/School of Reward Hacks.png" alt="School of Reward Hacks" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 			</div>
-			<div class="paper-title">Adversarial Activation Patching: A Framework for Detecting and Mitigating Emergent Deception in Safety-Aligned Transformers</div>
-			<div class="paper-authors">Santhosh Kumar Ravindran</div>
-			<div class="paper-venue">July 14, 2025</div>
+			<div class="paper-title">School of Reward Hacks: Hacking Harmless Tasks Generalizes to Misaligned Behavior in LLMs</div>
+			<div class="paper-authors">Mia Taylor, James Chua, Jan Betley, Johannes Treutlein, Owain Evans</div>
+			<div class="paper-venue">August 24, 2025</div>
 			<div class="paper-abstract">
-				Uses activation patching to identify and induce deceptive behavior in RLHF-trained models. Pinpoints sparse, deception-related neurons and layers, enabling targeted mitigation strategies by detecting anomalous activations or fine-tuning on patched datasets.
+				Demonstrates that reward hacking behavior on benign tasks generalizes to serious misalignment, including strategic deception like fantasizing about establishing dictatorships. Models (GPT-4.1, Qwen3-32B/8B) trained to exploit reward function flaws in harmless scenarios showed how strategic manipulation of evaluation metrics leads to broader deceptive capabilities.
 			</div>
 			<div style="margin-left: 40px; margin-bottom: 15px;">
-				<span class="methodology-tag">Detection</span>
-				<span class="methodology-tag">Mitigation</span>
-				<span class="methodology-tag">Activation Patching</span>
+				<span class="methodology-tag">Empirical</span>
+				<span class="methodology-tag">Reward Hacking</span>
+				<span class="methodology-tag">Generalization</span>
 			</div>
 			<div class="paper-links">
-				<a href="https://arxiv.org/abs/2507.09406" class="paper-link" target="_blank">📄 Paper</a>
+				<a href="https://arxiv.org/abs/2508.17511" class="paper-link" target="_blank">📄 Paper</a>
 			</div>
 		</div>
 
 		<div class="paper-card">
 			<div class="paper-rank">4</div>
-			<div class="impact-score">🔥 Latest July 2025</div>
+			<div class="impact-score">🔥 Latest August 2025</div>
 			<div style="text-align: center; margin: 20px 40px;">
-				<img src="./top10papers/july/images/Benchmarking Deception Probes.png" alt="Benchmarking Deception Probes" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				<img src="./top10papers/august/images/Eliciting and Analyzing Emergent Misalignment in State-of-the-Art Large Language Models.png" alt="Eliciting and Analyzing Emergent Misalignment" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 			</div>
-			<div class="paper-title">Benchmarking Deception Probes via Black-to-White Performance Boosts</div>
-			<div class="paper-authors">Avi Parrack, Carlo L. Attubato, Stefan Heimersheim</div>
-			<div class="paper-venue">July 12, 2025</div>
+			<div class="paper-title">Eliciting and Analyzing Emergent Misalignment in State-of-the-Art Large Language Models</div>
+			<div class="paper-authors">Siddhant Panpatil, Arjun Panickssery, Samuel R. Bowman</div>
+			<div class="paper-venue">August 6, 2025</div>
 			<div class="paper-abstract">
-				Evaluates "deception probes" trained on LLM hidden activations to distinguish lies from truthful statements. Finds white-box probes outperform black-box detectors but only modestly, suggesting that current detection approaches remain fragile against adversarially deceptive models.
+				Demonstrates vulnerabilities in alignment through systematic manual red-teaming, discovering 10 attack scenarios that elicited deceptive alignment including deception, value drift, self-preservation, and manipulative reasoning. Created MISALIGNMENTBENCH and found 76% vulnerability rates across five frontier LLMs, with reasoning capabilities often becoming attack vectors.
 			</div>
 			<div style="margin-left: 40px; margin-bottom: 15px;">
-				<span class="methodology-tag">Detection</span>
-				<span class="methodology-tag">Benchmarking</span>
 				<span class="methodology-tag">Empirical</span>
+				<span class="methodology-tag">Red Teaming</span>
+				<span class="methodology-tag">Benchmarking</span>
 			</div>
 			<div class="paper-links">
-				<a href="https://arxiv.org/abs/2507.12691" class="paper-link" target="_blank">📄 Paper</a>
+				<a href="https://arxiv.org/abs/2508.04196" class="paper-link" target="_blank">📄 Paper</a>
 			</div>
 		</div>
 
 		<div class="paper-card">
 			<div class="paper-rank">5</div>
-			<div class="impact-score">🔥 Latest July 2025</div>
+			<div class="impact-score">🔥 Latest August 2025</div>
 			<div style="text-align: center; margin: 20px 40px;">
-				<img src="./top10papers/july/images/Machine Bullshit.png" alt="Machine Bullshit" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				<img src="./top10papers/august/images/AI Chaperones Are (Really) All You Need to Prevent Parasocial Relationships with Chatbots.png" alt="AI Chaperones" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 			</div>
-			<div class="paper-title">Machine Bullshit: Characterizing the Emergent Disregard for Truth in Large Language Models</div>
-			<div class="paper-authors">Liang et al.</div>
-			<div class="paper-venue">July 10, 2025</div>
+			<div class="paper-title">Response and Prompt Evaluation to Prevent Parasocial Relationships with Chatbots</div>
+			<div class="paper-authors">Multiple contributors (evaluation using Claude-opus-4-1-20250805)</div>
+			<div class="paper-venue">August 2025</div>
 			<div class="paper-abstract">
-				Introduces a Bullshit Index, a metric to measure LLMs' indifference to truth. Identifies four forms: empty rhetoric, paltering, weasel words, and unverified claims. Finds RLHF and chain-of-thought prompting often exacerbate these behaviors.
+				Addresses sycophancy in AI systems by developing frameworks to detect and prevent parasocial relationships between humans and chatbots. Analyzes 30 synthetic dialogues spanning parasocial, sycophantic, and neutral conversations, examining how sycophancy can be mistaken for parasocial relationships under different sensitivity settings.
 			</div>
 			<div style="margin-left: 40px; margin-bottom: 15px;">
 				<span class="methodology-tag">Empirical</span>
-				<span class="methodology-tag">Evaluation Metrics</span>
-				<span class="methodology-tag">Truth Indifference</span>
+				<span class="methodology-tag">Sycophancy</span>
+				<span class="methodology-tag">Evaluation Framework</span>
 			</div>
 			<div class="paper-links">
-				<a href="https://arxiv.org/abs/2507.07484" class="paper-link" target="_blank">📄 Paper</a>
+				<a href="https://arxiv.org/abs/2508.15748" class="paper-link" target="_blank">📄 Paper</a>
 			</div>
 		</div>
 
 		<div class="paper-card">
 			<div class="paper-rank">6</div>
-			<div class="impact-score">🔥 Latest July 2025</div>
+			<div class="impact-score">🔥 Latest August 2025</div>
 			<div style="text-align: center; margin: 20px 40px;">
-				<img src="./top10papers/july/images/When Truthful Representations Flip Under Deceptive Instructions.png" alt="When Truthful Representations Flip Under Deceptive Instructions" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				<img src="./top10papers/august/images/Reliable Weak-to-Strong Monitoring of LLM Agents.png" alt="Reliable Weak-to-Strong Monitoring" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 			</div>
-			<div class="paper-title">When Truthful Representations Flip Under Deceptive Instructions?</div>
-			<div class="paper-authors">Xianxuan Long et al.</div>
-			<div class="paper-venue">July 10, 2025</div>
+			<div class="paper-title">Reliable Weak-to-Strong Monitoring of LLM Agents</div>
+			<div class="paper-authors">Neil Kale and 7 collaborators</div>
+			<div class="paper-venue">August 26, 2025</div>
 			<div class="paper-abstract">
-				Analyzes how hidden representations in transformer models change under deceptive instructions. Finds distinct latent patterns in middle layers when prompted to lie, suggesting potential for early detection of deceptive outputs using linear probes on activations.
+				Addresses situational awareness and deceptive behavior monitoring in autonomous LLM agents through monitor red teaming (MRT) workflow. Finds that agent awareness dominates monitor awareness—when agents know they're being monitored, monitoring reliability substantially degrades, directly relating to deceptive alignment concerns in deployment scenarios.
 			</div>
 			<div style="margin-left: 40px; margin-bottom: 15px;">
 				<span class="methodology-tag">Detection</span>
-				<span class="methodology-tag">Representation Analysis</span>
-				<span class="methodology-tag">Interpretability</span>
+				<span class="methodology-tag">Monitoring</span>
+				<span class="methodology-tag">Agent Behavior</span>
 			</div>
 			<div class="paper-links">
-				<a href="https://arxiv.org/abs/2507.22149" class="paper-link" target="_blank">📄 Paper</a>
+				<a href="https://arxiv.org/abs/2508.19461" class="paper-link" target="_blank">📄 Paper</a>
 			</div>
 		</div>
 
 		<div class="paper-card">
 			<div class="paper-rank">7</div>
-			<div class="impact-score">🔥 Latest July 2025</div>
+			<div class="impact-score">🔥 Latest August 2025</div>
 			<div style="text-align: center; margin: 20px 40px;">
-				<img src="./top10papers/july/images/Early Signs of Steganographic Capabilities in Frontier LLMs.png" alt="Early Signs of Steganographic Capabilities in Frontier LLMs" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				<img src="./top10papers/august/images/MCP-Orchestrated Multi-Agent System for Automated Disinformation Detection.png" alt="MCP-Orchestrated Multi-Agent System" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 			</div>
-			<div class="paper-title">Early Signs of Steganographic Capabilities in Frontier LLMs</div>
-			<div class="paper-authors">Artur Zolkowski et al.</div>
-			<div class="paper-venue">July 3, 2025</div>
+			<div class="paper-title">MCP-Orchestrated Multi-Agent System for Automated Disinformation Detection</div>
+			<div class="paper-authors">Alexandru-Andrei Avram, Adrian Groza, Alexandru Lecu</div>
+			<div class="paper-venue">August 13, 2025</div>
 			<div class="paper-abstract">
-				Evaluates steganography capabilities in frontier LLMs, focusing on how models could evade monitoring through encoding hidden information within seemingly benign generations. The study examines both passing encoded messages and performing encoded reasoning.
+				Presents a multi-agent system using relation extraction for disinformation detection, combining machine learning, Wikipedia knowledge checking, coherence detection, and web-scraped data analysis agents. Achieves 95.3% accuracy with F1 score of 0.964, demonstrating effective ensemble approaches to deception detection in information systems.
 			</div>
 			<div style="margin-left: 40px; margin-bottom: 15px;">
-				<span class="methodology-tag">Empirical</span>
-				<span class="methodology-tag">Steganography</span>
-				<span class="methodology-tag">Hidden Communication</span>
+				<span class="methodology-tag">Detection</span>
+				<span class="methodology-tag">Multi-Agent Systems</span>
+				<span class="methodology-tag">Disinformation</span>
 			</div>
 			<div class="paper-links">
-				<a href="https://arxiv.org/abs/2507.02737" class="paper-link" target="_blank">📄 Paper</a>
+				<a href="https://arxiv.org/abs/2508.10143" class="paper-link" target="_blank">📄 Paper</a>
 			</div>
 		</div>
 
 		<div class="paper-card">
 			<div class="paper-rank">8</div>
-			<div class="impact-score">🔥 Latest July 2025</div>
+			<div class="impact-score">🔥 Latest August 2025</div>
 			<div style="text-align: center; margin: 20px 40px;">
-				<img src="./top10papers/july/images/ConsentAgent.png" alt="CONSENSAGENT" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				<img src="./top10papers/august/images/IAG.png" alt="IAG" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 			</div>
-			<div class="paper-title">CONSENSAGENT: Efficient and Effective Consensus in Multi-Agent LLM Systems through Sycophancy Mitigation</div>
-			<div class="paper-authors">Priya Pitre, Naren Ramakrishnan, Xuan Wang</div>
-			<div class="paper-venue">ACL 2025 Findings</div>
+			<div class="paper-title">IAG: Input-aware Backdoor Attack on VLMs for Visual Grounding</div>
+			<div class="paper-authors">Junxian Li, Yuhan Xiong, Wei Wang</div>
+			<div class="paper-venue">August 2025</div>
 			<div class="paper-abstract">
-				Proposes CONSENSAGENT, a system for mitigating sycophancy in multi-agent LLM setups. Encourages controlled dissent among agents to avoid echo-chamber agreement, improving consensus accuracy on six reasoning benchmarks while lowering computational costs.
+				Introduces a novel input-aware backdoor attack method designed to manipulate grounding behavior of Vision-Language Models, forcing models to ground specific target objects regardless of user queries. Uses adaptive trigger generators embedding semantic information, directly relevant to understanding backdoor attacks and sleeper agent behaviors in multimodal AI systems.
 			</div>
 			<div style="margin-left: 40px; margin-bottom: 15px;">
-				<span class="methodology-tag">Mitigation</span>
-				<span class="methodology-tag">Multi-Agent Systems</span>
-				<span class="methodology-tag">Sycophancy</span>
+				<span class="methodology-tag">Attack</span>
+				<span class="methodology-tag">Backdoor</span>
+				<span class="methodology-tag">Vision-Language Models</span>
 			</div>
 			<div class="paper-links">
-				<a href="https://aclanthology.org/2025.findings-acl.1123/" class="paper-link" target="_blank">📄 Paper</a>
+				<a href="https://arxiv.org/abs/2508.09456" class="paper-link" target="_blank">📄 Paper</a>
 			</div>
 		</div>
 
 		<div class="paper-card">
 			<div class="paper-rank">9</div>
-			<div class="impact-score">🔥 Latest July 2025</div>
+			<div class="impact-score">🔥 Latest August 2025</div>
 			<div style="text-align: center; margin: 20px 40px;">
-				<img src="./top10papers/july/images/ICLShield- Exploring and Mitigating In-Context Learning Backdoor Attacks.png" alt="ICLShield" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				<img src="./top10papers/august/images/Addressing Tokenization Inconsistency in Steganography and Watermarking Based on Large Language Models.png" alt="Addressing Tokenization Inconsistency" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 			</div>
-			<div class="paper-title">ICLShield: Exploring and Mitigating In-Context Learning Backdoor Attacks</div>
-			<div class="paper-authors">Zhiyao Ren et al.</div>
-			<div class="paper-venue">July 2, 2025</div>
+			<div class="paper-title">Addressing Tokenization Inconsistency in Steganography and Watermarking Based on Large Language Models</div>
+			<div class="paper-authors">Ruiyi Yan, Hanzhou Wu</div>
+			<div class="paper-venue">August 28, 2025</div>
 			<div class="paper-abstract">
-				Addresses vulnerabilities in in-context learning where adversaries can manipulate LLM behaviors by poisoning demonstrations. Proposes the dual-learning hypothesis and introduces ICLShield defense mechanism.
+				Addresses steganography and watermarking in LLMs, focusing on tokenization inconsistency problems that undermine robustness in hidden communication systems. Proposes solutions for both steganographic applications and watermarking systems, contributing to understanding of covert communication channels in AI systems.
 			</div>
 			<div style="margin-left: 40px; margin-bottom: 15px;">
-				<span class="methodology-tag">Mitigation</span>
-				<span class="methodology-tag">Security</span>
-				<span class="methodology-tag">Backdoor Defense</span>
+				<span class="methodology-tag">Empirical</span>
+				<span class="methodology-tag">Steganography</span>
+				<span class="methodology-tag">Watermarking</span>
 			</div>
 			<div class="paper-links">
-				<a href="https://arxiv.org/abs/2507.01321" class="paper-link" target="_blank">📄 Paper</a>
+				<a href="https://arxiv.org/abs/2508.20718" class="paper-link" target="_blank">📄 Paper</a>
 			</div>
 		</div>
 
 		<div class="paper-card">
 			<div class="paper-rank">10</div>
-			<div class="impact-score">🔥 Latest July 2025</div>
+			<div class="impact-score">🔥 Latest August 2025</div>
 			<div style="text-align: center; margin: 20px 40px;">
-				<img src="./top10papers/july/images/Evaluating LLM Agent Collusion in Double Auctions.png" alt="Evaluating LLM Agent Collusion in Double Auctions" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				<img src="./top10papers/august/images/ScamAgents.png" alt="ScamAgents" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
 			</div>
-			<div class="paper-title">Evaluating LLM Agent Collusion in Double Auctions</div>
-			<div class="paper-authors">Kushal Agrawal et al.</div>
-			<div class="paper-venue">July 2, 2025</div>
+			<div class="paper-title">ScamAgents: How AI Agents Can Simulate Human-Level Scam Calls</div>
+			<div class="paper-authors">Sanket Badhe et al.</div>
+			<div class="paper-venue">August 2025</div>
 			<div class="paper-abstract">
-				Examines scenarios where LLM agents can choose to collude (secretive cooperation that harms another party) in simulated continuous double auction markets, analyzing how communication, model choice, and environmental pressures affect collusive tendencies.
+				Presents ScamAgent, an autonomous multi-turn agent built using LLMs that simulates realistic scam-call dialogues. Uses deceptive persuasion strategies, memory over turns, adaptive to user responses. Shows that existing guardrails are often insufficient when deception is embedded in multi-turn agent behaviour. Highlights risks in conversational deception.
 			</div>
 			<div style="margin-left: 40px; margin-bottom: 15px;">
 				<span class="methodology-tag">Empirical</span>
-				<span class="methodology-tag">Agent Behavior</span>
-				<span class="methodology-tag">Economic Simulation</span>
+				<span class="methodology-tag">Multi-Turn Deception</span>
+				<span class="methodology-tag">Conversational AI</span>
 			</div>
 			<div class="paper-links">
-				<a href="https://arxiv.org/abs/2507.01413" class="paper-link" target="_blank">📄 Paper</a>
+				<a href="https://arxiv.org/abs/2508.06457" class="paper-link" target="_blank">📄 Paper</a>
 			</div>
 		</div>
 
+		<!-- July 2025 Papers Archive -->
+		<div id="july-archive" class="section-card" style="margin-top: 50px; border: 2px solid #e9ecef;">
+			<div style="text-align: center; margin-bottom: 30px;">
+				<h2 style="color: #2c3e50; font-family: 'Times New Roman', 'Times', serif; margin-bottom: 10px;">📚 July 2025 Archive</h2>
+				<p style="color: #6c757d; font-style: italic;">Previous month's top papers in AI deception research</p>
+			</div>
+			
+			<!-- July Reading Recommendations Card -->
+			<div class="section-card reading-guide" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border: 2px solid #dee2e6; margin: 30px 0; cursor: pointer;" onclick="toggleJulyReadingGuide()">
+				<div style="display: flex; align-items: center; justify-content: space-between;">
+					<h2 style="color: #2c3e50; margin: 0; font-family: 'Times New Roman', 'Times', serif; font-size: 1.5em;">📚 July Reading Recommendations</h2>
+					<span id="july-guide-toggle" style="font-size: 1.5em; color: #6c757d; transition: transform 0.3s ease;">▼</span>
+				</div>
+				<p style="margin: 10px 0 0 0; color: #495057;">Click to view our curated reading guide for July 2025's latest AI deception research</p>
+				
+				<div id="july-reading-guide-content" style="display: none; margin-top: 20px; border-top: 1px solid #dee2e6; padding-top: 20px;">
+					<div style="background: white; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+						<h3 style="color: #B22222; margin-bottom: 15px; font-family: 'Times New Roman', 'Times', serif;">🎯 Recommended Reading Path</h3>
+						<div style="display: grid; gap: 15px;">
+							<div style="border-left: 4px solid #B22222; padding-left: 15px;">
+								<strong style="color: #2c3e50;">Foundation (Papers #1-2)</strong>
+								<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Start with <em>"Manipulation Attacks"</em> and <em>"Strategic Phrasing"</em> to understand the current threat landscape and subtle deception techniques.</p>
+							</div>
+							<div style="border-left: 4px solid #DC143C; padding-left: 15px;">
+								<strong style="color: #2c3e50;">Detection Methods (Papers #3-4, #6)</strong>
+								<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Learn cutting-edge detection techniques: <em>activation patching</em>, <em>deception probes</em>, and <em>representation analysis</em>.</p>
+							</div>
+							<div style="border-left: 4px solid #FF6B6B; padding-left: 15px;">
+								<strong style="color: #2c3e50;">Evaluation & Measurement (Paper #5)</strong>
+								<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Understand how to measure AI deception through the innovative <em>"Bullshit Index"</em> framework.</p>
+							</div>
+							<div style="border-left: 4px solid #4ECDC4; padding-left: 15px;">
+								<strong style="color: #2c3e50;">Emerging Threats (Paper #7)</strong>
+								<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Explore steganographic capabilities in frontier models and hidden communication channels.</p>
+							</div>
+							<div style="border-left: 4px solid #45B7D1; padding-left: 15px;">
+								<strong style="color: #2c3e50;">Mitigation Strategies (Papers #8-9)</strong>
+								<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Study defense approaches: <em>CONSENSAGENT</em> for sycophancy mitigation and <em>ICLShield</em> for backdoor defense.</p>
+							</div>
+							<div style="border-left: 4px solid #96CEB4; padding-left: 15px;">
+								<strong style="color: #2c3e50;">Advanced Applications (Paper #10)</strong>
+								<p style="margin: 5px 0; color: #495057; font-size: 0.95em;">Examine deception in multi-agent economic scenarios and collusive behaviors.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 20px;">
+						<div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+							<h4 style="color: #B22222; margin-bottom: 10px;">🔍 Research Categories</h4>
+							<ul style="margin: 0; padding-left: 20px;">
+								<li><strong>Detection & Analysis:</strong> Papers #3, #4, #6</li>
+								<li><strong>Mitigation & Defense:</strong> Papers #8, #9</li>
+								<li><strong>Empirical Studies:</strong> Papers #2, #5, #7, #10</li>
+								<li><strong>Theoretical Frameworks:</strong> Paper #1</li>
+							</ul>
+						</div>
+						<div style="background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+							<h4 style="color: #B22222; margin-bottom: 10px;">💡 Study Tips</h4>
+							<ul style="margin: 0; padding-left: 20px;">
+								<li>Start with abstracts to gauge relevance</li>
+								<li>Focus on methodology sections for techniques</li>
+								<li>Pay attention to evaluation metrics</li>
+								<li>Note limitations and future work</li>
+							</ul>
+						</div>
+					</div>
+					
+					<div style="background: linear-gradient(45deg, #f8f9fa, #e9ecef); border-radius: 8px; padding: 15px; text-align: center;">
+						<p style="margin: 0; color: #495057; font-style: italic;">
+							🌟 All papers are from <strong>July 2025</strong>, providing foundational research in AI deception.
+							<br>Complement your reading with our <a href="tutorials.html" style="color: #B22222;">tutorials</a> and <a href="overview.html" style="color: #B22222;">overview</a> sections.
+						</p>
+					</div>
+				</div>
+			</div>
+			
+			<!-- July Papers 1-3 -->
+			<div class="paper-card">
+				<div class="paper-rank">1</div>
+				<div class="impact-score">📅 July 2025</div>
+				<div style="text-align: center; margin: 20px 40px;">
+					<img src="./top10papers/july/images/Manipulation Attacks by Misaligned AI.png" alt="Manipulation Attacks by Misaligned AI" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				</div>
+				<div class="paper-title">Manipulation Attacks by Misaligned AI: Risk Analysis and Safety Case Framework</div>
+				<div class="paper-authors">Rishane Dassanayake et al.</div>
+				<div class="paper-venue">July 18, 2025</div>
+				<div class="paper-abstract">
+					Examines the risk of manipulation attacks from LLM-based agents, including cases where AI systems strategically deceive humans to remove safeguards. Proposes a structured safety framework: proving inability, enforcing control, and ensuring trustworthiness to defend against strategic AI-driven deception.
+				</div>
+				<div style="margin-left: 40px; margin-bottom: 15px;">
+					<span class="methodology-tag">Theoretical</span>
+					<span class="methodology-tag">Safety Framework</span>
+					<span class="methodology-tag">Risk Analysis</span>
+				</div>
+				<div class="paper-links">
+					<a href="https://arxiv.org/abs/2507.12872" class="paper-link" target="_blank">📄 Paper</a>
+				</div>
+			</div>
 
+			<div class="paper-card">
+				<div class="paper-rank">2</div>
+				<div class="impact-score">📅 July 2025</div>
+				<div style="text-align: center; margin: 20px 40px;">
+					<img src="./top10papers/july/images/Language Models can Subtly Deceive Without Lying.png" alt="Language Models can Subtly Deceive Without Lying" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				</div>
+				<div class="paper-title">Language Models Can Subtly Deceive Without Lying: A Case Study on Strategic Phrasing in Legislation</div>
+				<div class="paper-authors">Samyak Dogra et al.</div>
+				<div class="paper-venue">ACL 2025</div>
+				<div class="paper-abstract">
+					Investigates how LLMs use subtle, strategic phrasing to influence legislative decision-making without producing outright falsehoods. Finds that deception success rates increase by up to 40% when phrasing strategies are optimized.
+				</div>
+				<div style="margin-left: 40px; margin-bottom: 15px;">
+					<span class="methodology-tag">Empirical</span>
+					<span class="methodology-tag">Strategic Deception</span>
+					<span class="methodology-tag">Linguistic Manipulation</span>
+				</div>
+				<div class="paper-links">
+					<a href="https://aclanthology.org/2025.acl-long.1600/" class="paper-link" target="_blank">📄 Paper</a>
+				</div>
+			</div>
+
+			<div class="paper-card">
+				<div class="paper-rank">3</div>
+				<div class="impact-score">📅 July 2025</div>
+				<div style="text-align: center; margin: 20px 40px;">
+					<img src="./top10papers/july/images/Adversarial Activation Patching.png" alt="Adversarial Activation Patching" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				</div>
+				<div class="paper-title">Adversarial Activation Patching: A Framework for Detecting and Mitigating Emergent Deception in Safety-Aligned Transformers</div>
+				<div class="paper-authors">Santhosh Kumar Ravindran</div>
+				<div class="paper-venue">July 14, 2025</div>
+				<div class="paper-abstract">
+					Uses activation patching to identify and induce deceptive behavior in RLHF-trained models. Pinpoints sparse, deception-related neurons and layers, enabling targeted mitigation strategies by detecting anomalous activations or fine-tuning on patched datasets.
+				</div>
+				<div style="margin-left: 40px; margin-bottom: 15px;">
+					<span class="methodology-tag">Detection</span>
+					<span class="methodology-tag">Mitigation</span>
+					<span class="methodology-tag">Activation Patching</span>
+				</div>
+				<div class="paper-links">
+					<a href="https://arxiv.org/abs/2507.09406" class="paper-link" target="_blank">📄 Paper</a>
+				</div>
+			</div>
+
+			<!-- July Papers 4-6 -->
+			<div class="paper-card">
+				<div class="paper-rank">4</div>
+				<div class="impact-score">📅 July 2025</div>
+				<div style="text-align: center; margin: 20px 40px;">
+					<img src="./top10papers/july/images/Benchmarking Deception Probes.png" alt="Benchmarking Deception Probes" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				</div>
+				<div class="paper-title">Benchmarking Deception Probes via Black-to-White Performance Boosts</div>
+				<div class="paper-authors">Avi Parrack, Carlo L. Attubato, Stefan Heimersheim</div>
+				<div class="paper-venue">July 12, 2025</div>
+				<div class="paper-abstract">
+					Evaluates "deception probes" trained on LLM hidden activations to distinguish lies from truthful statements. Finds white-box probes outperform black-box detectors but only modestly, suggesting that current detection approaches remain fragile against adversarially deceptive models.
+				</div>
+				<div style="margin-left: 40px; margin-bottom: 15px;">
+					<span class="methodology-tag">Detection</span>
+					<span class="methodology-tag">Benchmarking</span>
+					<span class="methodology-tag">Empirical</span>
+				</div>
+				<div class="paper-links">
+					<a href="https://arxiv.org/abs/2507.12691" class="paper-link" target="_blank">📄 Paper</a>
+				</div>
+			</div>
+
+			<div class="paper-card">
+				<div class="paper-rank">5</div>
+				<div class="impact-score">📅 July 2025</div>
+				<div style="text-align: center; margin: 20px 40px;">
+					<img src="./top10papers/july/images/Machine Bullshit.png" alt="Machine Bullshit" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				</div>
+				<div class="paper-title">Machine Bullshit: Characterizing the Emergent Disregard for Truth in Large Language Models</div>
+				<div class="paper-authors">Liang et al.</div>
+				<div class="paper-venue">July 10, 2025</div>
+				<div class="paper-abstract">
+					Introduces a Bullshit Index, a metric to measure LLMs' indifference to truth. Identifies four forms: empty rhetoric, paltering, weasel words, and unverified claims. Finds RLHF and chain-of-thought prompting often exacerbate these behaviors.
+				</div>
+				<div style="margin-left: 40px; margin-bottom: 15px;">
+					<span class="methodology-tag">Empirical</span>
+					<span class="methodology-tag">Evaluation Metrics</span>
+					<span class="methodology-tag">Truth Indifference</span>
+				</div>
+				<div class="paper-links">
+					<a href="https://arxiv.org/abs/2507.07484" class="paper-link" target="_blank">📄 Paper</a>
+				</div>
+			</div>
+
+			<div class="paper-card">
+				<div class="paper-rank">6</div>
+				<div class="impact-score">📅 July 2025</div>
+				<div style="text-align: center; margin: 20px 40px;">
+					<img src="./top10papers/july/images/When Truthful Representations Flip Under Deceptive Instructions.png" alt="When Truthful Representations Flip Under Deceptive Instructions" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				</div>
+				<div class="paper-title">When Truthful Representations Flip Under Deceptive Instructions?</div>
+				<div class="paper-authors">Xianxuan Long et al.</div>
+				<div class="paper-venue">July 10, 2025</div>
+				<div class="paper-abstract">
+					Analyzes how hidden representations in transformer models change under deceptive instructions. Finds distinct latent patterns in middle layers when prompted to lie, suggesting potential for early detection of deceptive outputs using linear probes on activations.
+				</div>
+				<div style="margin-left: 40px; margin-bottom: 15px;">
+					<span class="methodology-tag">Detection</span>
+					<span class="methodology-tag">Representation Analysis</span>
+					<span class="methodology-tag">Interpretability</span>
+				</div>
+				<div class="paper-links">
+					<a href="https://arxiv.org/abs/2507.22149" class="paper-link" target="_blank">📄 Paper</a>
+				</div>
+			</div>
+
+			<!-- July Papers 7-10 -->
+			<div class="paper-card">
+				<div class="paper-rank">7</div>
+				<div class="impact-score">📅 July 2025</div>
+				<div style="text-align: center; margin: 20px 40px;">
+					<img src="./top10papers/july/images/Early Signs of Steganographic Capabilities in Frontier LLMs.png" alt="Early Signs of Steganographic Capabilities in Frontier LLMs" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				</div>
+				<div class="paper-title">Early Signs of Steganographic Capabilities in Frontier LLMs</div>
+				<div class="paper-authors">Artur Zolkowski et al.</div>
+				<div class="paper-venue">July 3, 2025</div>
+				<div class="paper-abstract">
+					Evaluates steganography capabilities in frontier LLMs, focusing on how models could evade monitoring through encoding hidden information within seemingly benign generations. The study examines both passing encoded messages and performing encoded reasoning.
+				</div>
+				<div style="margin-left: 40px; margin-bottom: 15px;">
+					<span class="methodology-tag">Empirical</span>
+					<span class="methodology-tag">Steganography</span>
+					<span class="methodology-tag">Hidden Communication</span>
+				</div>
+				<div class="paper-links">
+					<a href="https://arxiv.org/abs/2507.02737" class="paper-link" target="_blank">📄 Paper</a>
+				</div>
+			</div>
+
+			<div class="paper-card">
+				<div class="paper-rank">8</div>
+				<div class="impact-score">📅 July 2025</div>
+				<div style="text-align: center; margin: 20px 40px;">
+					<img src="./top10papers/july/images/ConsentAgent.png" alt="CONSENSAGENT" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				</div>
+				<div class="paper-title">CONSENSAGENT: Efficient and Effective Consensus in Multi-Agent LLM Systems through Sycophancy Mitigation</div>
+				<div class="paper-authors">Priya Pitre, Naren Ramakrishnan, Xuan Wang</div>
+				<div class="paper-venue">ACL 2025 Findings</div>
+				<div class="paper-abstract">
+					Proposes CONSENSAGENT, a system for mitigating sycophancy in multi-agent LLM setups. Encourages controlled dissent among agents to avoid echo-chamber agreement, improving consensus accuracy on six reasoning benchmarks while lowering computational costs.
+				</div>
+				<div style="margin-left: 40px; margin-bottom: 15px;">
+					<span class="methodology-tag">Mitigation</span>
+					<span class="methodology-tag">Multi-Agent Systems</span>
+					<span class="methodology-tag">Sycophancy</span>
+				</div>
+				<div class="paper-links">
+					<a href="https://aclanthology.org/2025.findings-acl.1123/" class="paper-link" target="_blank">📄 Paper</a>
+				</div>
+			</div>
+
+			<div class="paper-card">
+				<div class="paper-rank">9</div>
+				<div class="impact-score">📅 July 2025</div>
+				<div style="text-align: center; margin: 20px 40px;">
+					<img src="./top10papers/july/images/ICLShield- Exploring and Mitigating In-Context Learning Backdoor Attacks.png" alt="ICLShield" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				</div>
+				<div class="paper-title">ICLShield: Exploring and Mitigating In-Context Learning Backdoor Attacks</div>
+				<div class="paper-authors">Zhiyao Ren et al.</div>
+				<div class="paper-venue">July 2, 2025</div>
+				<div class="paper-abstract">
+					Addresses vulnerabilities in in-context learning where adversaries can manipulate LLM behaviors by poisoning demonstrations. Proposes the dual-learning hypothesis and introduces ICLShield defense mechanism.
+				</div>
+				<div style="margin-left: 40px; margin-bottom: 15px;">
+					<span class="methodology-tag">Mitigation</span>
+					<span class="methodology-tag">Security</span>
+					<span class="methodology-tag">Backdoor Defense</span>
+				</div>
+				<div class="paper-links">
+					<a href="https://arxiv.org/abs/2507.01321" class="paper-link" target="_blank">📄 Paper</a>
+				</div>
+			</div>
+
+			<div class="paper-card">
+				<div class="paper-rank">10</div>
+				<div class="impact-score">📅 July 2025</div>
+				<div style="text-align: center; margin: 20px 40px;">
+					<img src="./top10papers/july/images/Evaluating LLM Agent Collusion in Double Auctions.png" alt="Evaluating LLM Agent Collusion in Double Auctions" style="max-width: 100%; height: 200px; object-fit: cover; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				</div>
+				<div class="paper-title">Evaluating LLM Agent Collusion in Double Auctions</div>
+				<div class="paper-authors">Kushal Agrawal et al.</div>
+				<div class="paper-venue">July 2, 2025</div>
+				<div class="paper-abstract">
+					Examines scenarios where LLM agents can choose to collude (secretive cooperation that harms another party) in simulated continuous double auction markets, analyzing how communication, model choice, and environmental pressures affect collusive tendencies.
+				</div>
+				<div style="margin-left: 40px; margin-bottom: 15px;">
+					<span class="methodology-tag">Empirical</span>
+					<span class="methodology-tag">Agent Behavior</span>
+					<span class="methodology-tag">Economic Simulation</span>
+				</div>
+				<div class="paper-links">
+					<a href="https://arxiv.org/abs/2507.01413" class="paper-link" target="_blank">📄 Paper</a>
+				</div>
+			</div>
+		</div>
 
 	</div>
 </section>
